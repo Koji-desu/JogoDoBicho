@@ -1,4 +1,4 @@
-# JogoDoBicho - Projeto Integrador (PI)
+# Jogo Do Bicho - Projeto Integrador (PI)
 
 
 Jogo RPG baseado em famoso "Jogo do Bicho" popularmente conhecido como jogo de azar
