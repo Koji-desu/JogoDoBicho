@@ -29,6 +29,10 @@ public class RegrasTeste extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Jogo Do Bicho");
+        setLocation(new java.awt.Point(535, 150));
+        setResizable(false);
+        setSize(new java.awt.Dimension(500, 500));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Regras");
