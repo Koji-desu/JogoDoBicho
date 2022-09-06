@@ -8,12 +8,14 @@
  * @author pablo.rrgomes1
  */
 import java.util.Random;
+
 public class JogarTeste extends javax.swing.JFrame {
 
-     String nomeSorteado[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
-         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
-         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
-         "Urso", "Veado", "Vaca"};
+    String nomeSorteado[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
+        "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
+        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
+        "Urso", "Veado", "Vaca"};
+
     public JogarTeste() {
         initComponents();
     }
@@ -114,19 +116,19 @@ public class JogarTeste extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+
         InicialTeste i = new InicialTeste();
         this.dispose();
         i.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+
         jButton1.setText("Inicio");
         Random r = new Random();
         int idx = r.nextInt(nomeSorteado.length);
-       // lblbicho.setText(nomeSorteado[idx]);    
-        jOptionPane1.showMessageDialog(null,"O animal sorteado foi: "+ nomeSorteado[idx]);
+        // lblbicho.setText(nomeSorteado[idx]);    
+        jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx]);
         jButton3.setEnabled(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -169,9 +171,9 @@ public class JogarTeste extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-            JogarTeste sorteio = new JogarTeste();
-            String nome = sorteio.sortearNome();
-        
+        JogarTeste sorteio = new JogarTeste();
+        String nome = sorteio.sortearNome();
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -180,13 +182,13 @@ public class JogarTeste extends javax.swing.JFrame {
             }
         });
     }
-    
-      public String sortearNome() {
+
+    public String sortearNome() {
         Random r = new Random();
         int idx = r.nextInt(nomeSorteado.length);
-    
-    return nomeSorteado[idx];
-  }
+
+        return nomeSorteado[idx];
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

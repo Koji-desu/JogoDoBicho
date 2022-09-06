@@ -108,7 +108,7 @@ public class JogarTeste3Bichos extends javax.swing.JFrame {
         InicialTeste i = new InicialTeste();
         this.dispose();
         i.setVisible(true);
-        
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

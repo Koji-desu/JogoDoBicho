@@ -7,7 +7,7 @@
  *
  * @author pablo.rrgomes1
  */
-public class RegrasTeste extends javax.swing.JFrame {
+    public class RegrasTeste extends javax.swing.JFrame {
 
     /**
      * Creates new form RegrasTeste

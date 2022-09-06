@@ -156,31 +156,31 @@ public class EscolherModoTeste extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-      if(jRadioButton1.isSelected()){
-      JogarTeste t = new JogarTeste();
-      this.dispose();
-      t.setVisible(true);
-      
-      } else if(jRadioButton2.isSelected()){
-      JogarTeste2Bichos t = new JogarTeste2Bichos();
-      this.dispose();
-      t.setVisible(true);
-      
-      } else if(jRadioButton3.isSelected()){
-      JogarTeste3Bichos t = new JogarTeste3Bichos();
-      this.dispose();
-      t.setVisible(true);
-      
-      } else if(jRadioButton4.isSelected()){
-      JogarTeste4Bichos t = new JogarTeste4Bichos();
-      this.dispose();
-      t.setVisible(true);
-      
-      } else if(jRadioButton5.isSelected()){
-      JogarTeste5Bichos t = new JogarTeste5Bichos();
-      this.dispose();
-      t.setVisible(true);
-      }
+        if (jRadioButton1.isSelected()) {
+            JogarTeste t = new JogarTeste();
+            this.dispose();
+            t.setVisible(true);
+
+        } else if (jRadioButton2.isSelected()) {
+            JogarTeste2Bichos t = new JogarTeste2Bichos();
+            this.dispose();
+            t.setVisible(true);
+
+        } else if (jRadioButton3.isSelected()) {
+            JogarTeste3Bichos t = new JogarTeste3Bichos();
+            this.dispose();
+            t.setVisible(true);
+
+        } else if (jRadioButton4.isSelected()) {
+            JogarTeste4Bichos t = new JogarTeste4Bichos();
+            this.dispose();
+            t.setVisible(true);
+
+        } else if (jRadioButton5.isSelected()) {
+            JogarTeste5Bichos t = new JogarTeste5Bichos();
+            this.dispose();
+            t.setVisible(true);
+        }
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**
