@@ -14,10 +14,6 @@ public class JogarTeste extends javax.swing.JFrame {
          "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
          "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
          "Urso", "Veado", "Vaca"};
-         String nomeSorteado2[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
-         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
-         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
-         "Urso", "Veado", "Vaca"};
     public JogarTeste() {
         initComponents();
     }
@@ -34,7 +30,7 @@ public class JogarTeste extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         lblbicho = new javax.swing.JLabel();
-        lblbicho2 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Jogo Do Bicho");
@@ -59,7 +55,12 @@ public class JogarTeste extends javax.swing.JFrame {
         lblbicho.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblbicho.setText("Escolha seu bicho");
 
-        lblbicho2.setText("jLabel1");
+        jButton3.setText("Jogar Novamente");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,30 +69,30 @@ public class JogarTeste extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(162, 162, 162)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(148, 148, 148)
+                        .addComponent(jButton1)
+                        .addGap(70, 70, 70)
+                        .addComponent(jButton3))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(lblbicho, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(206, 206, 206)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addComponent(lblbicho2, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(153, Short.MAX_VALUE))
+                        .addGap(187, 187, 187)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(140, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lblbicho, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(169, 169, 169))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(98, 98, 98)
+                .addGap(111, 111, 111)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addGap(30, 30, 30)
                 .addComponent(lblbicho, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblbicho2)
-                .addGap(53, 53, 53)
-                .addComponent(jButton1)
+                .addGap(63, 63, 63)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton3))
                 .addContainerGap(157, Short.MAX_VALUE))
         );
 
@@ -108,12 +109,17 @@ public class JogarTeste extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        jButton1.setText("Inicio");
         Random r = new Random();
         int idx = r.nextInt(nomeSorteado.length);
-        int idx2 = r.nextInt(nomeSorteado2.length);
-         lblbicho.setText(nomeSorteado[idx]); 
-         lblbicho2.setText(nomeSorteado[idx2]);
+        lblbicho.setText(nomeSorteado[idx]);      
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        EscolherModoTeste e = new EscolherModoTeste();
+        this.dispose();
+        e.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,7 +176,7 @@ public class JogarTeste extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel lblbicho;
-    private javax.swing.JLabel lblbicho2;
     // End of variables declaration//GEN-END:variables
 }

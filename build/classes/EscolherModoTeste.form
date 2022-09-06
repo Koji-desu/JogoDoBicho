@@ -7,6 +7,10 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Jogo Do Bicho"/>
+    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+      <Color id="Default Cursor"/>
+    </Property>
     <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
       <Point value="[535, 150]"/>
     </Property>
@@ -51,16 +55,18 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="199" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
                           <Component id="jToggleButton2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton3" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jRadioButton4" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jRadioButton5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                              <Component id="jRadioButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="202" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -170,6 +176,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Avan&#xe7;ar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton2ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

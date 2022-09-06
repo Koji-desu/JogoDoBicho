@@ -36,6 +36,8 @@ public class EscolherModoTeste extends javax.swing.JFrame {
         jToggleButton2 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Jogo Do Bicho");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(535, 150));
         setMinimumSize(new java.awt.Dimension(500, 500));
         setResizable(false);
@@ -82,6 +84,11 @@ public class EscolherModoTeste extends javax.swing.JFrame {
         jRadioButton5.setText("5 Bichos");
 
         jToggleButton2.setText("Avançar");
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,13 +106,14 @@ public class EscolherModoTeste extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(199, 199, 199)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton1)
                             .addComponent(jToggleButton2)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton3)
                             .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton5))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jRadioButton5)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jRadioButton1)
+                                .addComponent(jRadioButton2)
+                                .addComponent(jRadioButton3)))))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,6 +154,34 @@ public class EscolherModoTeste extends javax.swing.JFrame {
         this.dispose();
         i.setVisible(true);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+      if(jRadioButton1.isSelected()){
+      JogarTeste t = new JogarTeste();
+      this.dispose();
+      t.setVisible(true);
+      
+      } else if(jRadioButton2.isSelected()){
+      JogarTeste2Bichos t = new JogarTeste2Bichos();
+      this.dispose();
+      t.setVisible(true);
+      
+      } else if(jRadioButton3.isSelected()){
+      JogarTeste3Bichos t = new JogarTeste3Bichos();
+      this.dispose();
+      t.setVisible(true);
+      
+      } else if(jRadioButton4.isSelected()){
+      JogarTeste4Bichos t = new JogarTeste4Bichos();
+      this.dispose();
+      t.setVisible(true);
+      
+      } else if(jRadioButton5.isSelected()){
+      JogarTeste5Bichos t = new JogarTeste5Bichos();
+      this.dispose();
+      t.setVisible(true);
+      }
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**
      * @param args the command line arguments
