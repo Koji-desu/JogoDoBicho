@@ -25,7 +25,8 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        jDialog1 = new javax.swing.JDialog();
+        jOptionPane1 = new javax.swing.JOptionPane();
         jLabel1 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
@@ -55,6 +56,17 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Jogo Do Bicho");
         setLocation(new java.awt.Point(535, 150));
@@ -65,82 +77,72 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Escolha seus bichos");
 
-        buttonGroup1.add(jCheckBox1);
         jCheckBox1.setText("jCheckBox1");
+        jCheckBox1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jCheckBox1MouseClicked(evt);
+            }
+        });
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
-        buttonGroup1.add(jCheckBox2);
         jCheckBox2.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox3);
         jCheckBox3.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox4);
         jCheckBox4.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox5);
         jCheckBox5.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox6);
         jCheckBox6.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox7);
         jCheckBox7.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox8);
         jCheckBox8.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox9);
         jCheckBox9.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox10);
         jCheckBox10.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox11);
         jCheckBox11.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox12);
         jCheckBox12.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox13);
         jCheckBox13.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox14);
         jCheckBox14.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox15);
         jCheckBox15.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox16);
         jCheckBox16.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox17);
         jCheckBox17.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox18);
         jCheckBox18.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox19);
         jCheckBox19.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox20);
         jCheckBox20.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox21);
         jCheckBox21.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox22);
         jCheckBox22.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox23);
         jCheckBox23.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox24);
         jCheckBox24.setText("jCheckBox1");
 
-        buttonGroup1.add(jCheckBox25);
         jCheckBox25.setText("jCheckBox1");
 
         jButton1.setText("Avançar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Voltar");
 
@@ -166,7 +168,7 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jCheckBox7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                                 .addComponent(jCheckBox23)
                                 .addGap(18, 18, 18)
                                 .addComponent(jCheckBox17))
@@ -210,7 +212,7 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(132, 132, 132))
+                .addGap(268, 268, 268))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,6 +267,19 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jCheckBox1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox1MouseClicked
+       
+    }//GEN-LAST:event_jCheckBox1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jOptionPane1.setMessage("aaa");
+        jOptionPane1.showMessageDialog(null, "123");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -301,7 +316,6 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
@@ -329,6 +343,8 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JOptionPane jOptionPane1;
     // End of variables declaration//GEN-END:variables
 }
