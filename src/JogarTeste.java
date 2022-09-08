@@ -171,8 +171,8 @@ public class JogarTeste extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-        JogarTeste sorteio = new JogarTeste();
-        String nome = sorteio.sortearNome();
+
+        
 
 
         /* Create and display the form */
