@@ -12,6 +12,40 @@ public class EscolherModoTeste extends javax.swing.JFrame {
     /**
      * Creates new form EscolherModoTeste
      */
+    public void inicial() {
+        InicialTeste i = new InicialTeste();
+        this.dispose();
+        i.setVisible(true);
+    }
+
+    public void Escolhas() {
+        if (jRadioButton1.isSelected()) {
+            JogarTeste t = new JogarTeste();
+            this.dispose();
+            t.setVisible(true);
+
+        } else if (jRadioButton2.isSelected()) {
+            JogarTeste2Bichos t = new JogarTeste2Bichos();
+            this.dispose();
+            t.setVisible(true);
+
+        } else if (jRadioButton3.isSelected()) {
+            JogarTeste3Bichos t = new JogarTeste3Bichos();
+            this.dispose();
+            t.setVisible(true);
+
+        } else if (jRadioButton4.isSelected()) {
+            JogarTeste4Bichos t = new JogarTeste4Bichos();
+            this.dispose();
+            t.setVisible(true);
+
+        } else if (jRadioButton5.isSelected()) {
+            JogarTeste5Bichos t = new JogarTeste5Bichos();
+            this.dispose();
+            t.setVisible(true);
+        }
+    }
+
     public EscolherModoTeste() {
         initComponents();
     }
@@ -146,41 +180,16 @@ public class EscolherModoTeste extends javax.swing.JFrame {
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-        InicialTeste i = new InicialTeste();
-        this.dispose();
-        i.setVisible(true);
+        inicial();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        if (jRadioButton1.isSelected()) {
-            JogarTeste t = new JogarTeste();
-            this.dispose();
-            t.setVisible(true);
-
-        } else if (jRadioButton2.isSelected()) {
-            JogarTeste2Bichos t = new JogarTeste2Bichos();
-            this.dispose();
-            t.setVisible(true);
-
-        } else if (jRadioButton3.isSelected()) {
-            JogarTeste3Bichos t = new JogarTeste3Bichos();
-            this.dispose();
-            t.setVisible(true);
-
-        } else if (jRadioButton4.isSelected()) {
-            JogarTeste4Bichos t = new JogarTeste4Bichos();
-            this.dispose();
-            t.setVisible(true);
-
-        } else if (jRadioButton5.isSelected()) {
-            JogarTeste5Bichos t = new JogarTeste5Bichos();
-            this.dispose();
-            t.setVisible(true);
-        }
+        Escolhas();
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**

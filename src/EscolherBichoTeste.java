@@ -115,7 +115,7 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         cbCobra.setText("Cobra");
 
         cbCoelho.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbCoelho.setText("Camelo");
+        cbCoelho.setText("Coelho");
 
         cbCavalo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbCavalo.setText("Cavalo");

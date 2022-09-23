@@ -9,9 +9,12 @@
  */
 public class ListaTeste extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ListaTeste
-     */
+    public void inicial() {
+        InicialTeste i = new InicialTeste();
+        this.dispose();
+        i.setVisible(true);
+    }
+
     public ListaTeste() {
         initComponents();
     }
@@ -273,9 +276,7 @@ public class ListaTeste extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        InicialTeste i = new InicialTeste();
-        this.dispose();
-        i.setVisible(true);
+        inicial();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

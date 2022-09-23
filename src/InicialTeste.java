@@ -9,6 +9,29 @@
  */
 public class InicialTeste extends javax.swing.JFrame {
 
+    public void inicial() {
+        InicialTeste i = new InicialTeste();
+        this.dispose();
+        i.setVisible(true);
+    }
+
+    public static void nextModo() {
+
+        EscolherModoTeste t = new EscolherModoTeste();
+        t.setVisible(true);
+
+    }
+
+    public static void nextLista() {
+        ListaTeste l = new ListaTeste();
+        l.setVisible(true);
+    }
+
+    public static void nextRegras() {
+        RegrasTeste r = new RegrasTeste();
+        r.setVisible(true);
+    }
+
     /**
      * Creates new form TelaTeste
      */
@@ -140,25 +163,21 @@ public class InicialTeste extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-
-        EscolherModoTeste t = new EscolherModoTeste();
+        nextModo();
         this.dispose();
-        t.setVisible(true);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        ListaTeste l = new ListaTeste();
+        nextLista();
         this.dispose();
-        l.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        RegrasTeste r = new RegrasTeste();
+        nextRegras();
         this.dispose();
-        r.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -189,6 +208,7 @@ public class InicialTeste extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
 
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -196,6 +216,7 @@ public class InicialTeste extends javax.swing.JFrame {
             }
         });
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

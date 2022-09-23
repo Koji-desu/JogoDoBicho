@@ -7,11 +7,14 @@
  *
  * @author pablo.rrgomes1
  */
-    public class RegrasTeste extends javax.swing.JFrame {
+public class RegrasTeste extends javax.swing.JFrame {
 
-    /**
-     * Creates new form RegrasTeste
-     */
+    public void inicial() {
+        InicialTeste i = new InicialTeste();
+        this.dispose();
+        i.setVisible(true);
+    }
+
     public RegrasTeste() {
         initComponents();
     }
@@ -90,9 +93,7 @@
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        InicialTeste i = new InicialTeste();
-        this.dispose();
-        i.setVisible(true);
+        inicial();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
