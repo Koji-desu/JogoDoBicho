@@ -143,10 +143,9 @@ public class EscolherModoTeste extends javax.swing.JFrame {
                             .addComponent(jToggleButton2)
                             .addComponent(jRadioButton4)
                             .addComponent(jRadioButton5)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jRadioButton1)
-                                .addComponent(jRadioButton2)
-                                .addComponent(jRadioButton3)))))
+                            .addComponent(jRadioButton1)
+                            .addComponent(jRadioButton2)
+                            .addComponent(jRadioButton3))))
                 .addContainerGap(202, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -172,6 +171,7 @@ public class EscolherModoTeste extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed

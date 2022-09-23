@@ -19,6 +19,12 @@
     </Container>
     <Component class="javax.swing.JOptionPane" name="jOptionPane1">
     </Component>
+    <Container class="javax.swing.JPopupMenu" name="jPopupMenu1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -36,7 +42,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -53,13 +59,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" pref="75" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="268" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -67,39 +66,47 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cbAguia" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbAvestruz" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbBurro" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbBorboleta" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbCachorro" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbCabra" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cbCarneiro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbCoelho" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbCavalo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbElefante" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbGalo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbAguia" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbAvestruz" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbBurro" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbBorboleta" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbCachorro" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbCabra" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="cbCarneiro" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbCoelho" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbCavalo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbElefante" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbGalo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="cbGato" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cbCobra" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbJacare" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbLeao" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbVaca" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbVeado" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbUrso" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="cbGato" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                              <Component id="jButton2" min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cbCobra" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbJacare" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbLeao" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbVaca" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbVeado" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbUrso" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -109,6 +116,7 @@
                           <Component id="cbPeru" min="-2" max="-2" attributes="0"/>
                           <Component id="cbPorco" min="-2" max="-2" attributes="0"/>
                           <Component id="cbMacaco" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -116,7 +124,7 @@
                       <Component id="cbCamelo" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="87" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

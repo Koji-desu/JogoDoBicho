@@ -27,6 +27,7 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
 
         jDialog1 = new javax.swing.JDialog();
         jOptionPane1 = new javax.swing.JOptionPane();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         jLabel1 = new javax.swing.JLabel();
         cbAvestruz = new javax.swing.JCheckBox();
         cbAguia = new javax.swing.JCheckBox();
@@ -175,46 +176,45 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(268, 268, 268))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(142, 142, 142)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbAguia)
-                            .addComponent(cbAvestruz)
-                            .addComponent(cbBurro)
-                            .addComponent(cbBorboleta)
-                            .addComponent(cbCachorro)
-                            .addComponent(cbCabra))
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cbCarneiro)
-                                    .addComponent(cbCoelho)
-                                    .addComponent(cbCavalo)
-                                    .addComponent(cbElefante)
-                                    .addComponent(cbGalo))
-                                .addGap(46, 46, 46))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(cbGato)
-                                .addGap(66, 66, 66)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbCobra)
-                            .addComponent(cbJacare)
-                            .addComponent(cbLeao)
-                            .addComponent(cbVaca)
-                            .addComponent(cbVeado)
-                            .addComponent(cbUrso))
+                                .addGap(25, 25, 25)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbAguia)
+                                    .addComponent(cbAvestruz)
+                                    .addComponent(cbBurro)
+                                    .addComponent(cbBorboleta)
+                                    .addComponent(cbCachorro)
+                                    .addComponent(cbCabra))
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(cbCarneiro)
+                                            .addComponent(cbCoelho)
+                                            .addComponent(cbCavalo)
+                                            .addComponent(cbElefante)
+                                            .addComponent(cbGalo))
+                                        .addGap(46, 46, 46))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(cbGato)
+                                        .addGap(66, 66, 66)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbCobra)
+                                    .addComponent(cbJacare)
+                                    .addComponent(cbLeao)
+                                    .addComponent(cbVaca)
+                                    .addComponent(cbVeado)
+                                    .addComponent(cbUrso)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(64, 64, 64)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbTigre)
@@ -222,11 +222,12 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
                             .addComponent(cbPavao)
                             .addComponent(cbPeru)
                             .addComponent(cbPorco)
-                            .addComponent(cbMacaco)))
+                            .addComponent(cbMacaco)
+                            .addComponent(jButton1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(190, 190, 190)
                         .addComponent(cbCamelo)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,6 +280,7 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbAvestruzMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbAvestruzMouseClicked
@@ -360,5 +362,6 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JOptionPane jOptionPane1;
+    private javax.swing.JPopupMenu jPopupMenu1;
     // End of variables declaration//GEN-END:variables
 }
