@@ -64,10 +64,10 @@ public class EscolherModoTeste extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        voltarButton = new javax.swing.JToggleButton();
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
+        avancarButton = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Jogo Do Bicho");
@@ -97,10 +97,10 @@ public class EscolherModoTeste extends javax.swing.JFrame {
         jRadioButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jRadioButton3.setText("3 Bichos");
 
-        jToggleButton1.setText("Voltar");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        voltarButton.setText("Voltar");
+        voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                voltarButtonActionPerformed(evt);
             }
         });
 
@@ -117,10 +117,10 @@ public class EscolherModoTeste extends javax.swing.JFrame {
         jRadioButton5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jRadioButton5.setText("5 Bichos");
 
-        jToggleButton2.setText("Avançar");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        avancarButton.setText("Avançar");
+        avancarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                avancarButtonActionPerformed(evt);
             }
         });
 
@@ -136,11 +136,11 @@ public class EscolherModoTeste extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(170, 170, 170)
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(voltarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(199, 199, 199)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jToggleButton2)
+                            .addComponent(avancarButton)
                             .addComponent(jRadioButton4)
                             .addComponent(jRadioButton5)
                             .addComponent(jRadioButton1)
@@ -164,9 +164,9 @@ public class EscolherModoTeste extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jRadioButton5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(jToggleButton2)
+                .addComponent(avancarButton)
                 .addGap(18, 18, 18)
-                .addComponent(jToggleButton1)
+                .addComponent(voltarButton)
                 .addGap(69, 69, 69))
         );
 
@@ -183,14 +183,14 @@ public class EscolherModoTeste extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
         // TODO add your handling code here:
         inicial();
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_voltarButtonActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void avancarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_avancarButtonActionPerformed
         Escolhas();
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_avancarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -228,6 +228,7 @@ public class EscolherModoTeste extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton avancarButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jRadioButton1;
@@ -235,7 +236,6 @@ public class EscolherModoTeste extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }

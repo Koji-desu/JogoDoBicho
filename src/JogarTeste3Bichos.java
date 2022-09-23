@@ -1,30 +1,54 @@
+
 import java.util.Random;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author Koji
  */
 public class JogarTeste3Bichos extends javax.swing.JFrame {
 
+    public void JogarNovamente() {
+        EscolherModoTeste e = new EscolherModoTeste();
+        this.dispose();
+        e.setVisible(true);
+    }
+
+    public void inicial() {
+        InicialTeste i = new InicialTeste();
+        this.dispose();
+        i.setVisible(true);
+    }
+
+    public void Jogar3Bichos() {
+        voltarButton.setText("Inicio");
+        Random r = new Random();
+        int idx = r.nextInt(nomeSorteado.length);
+        int idx2 = r.nextInt(nomeSorteado2.length);
+        int idx3 = r.nextInt(nomeSorteado3.length);
+        // lblbicho.setText(nomeSorteado[idx]);
+        jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: \n\n" + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3]);
+        voltarButton.setEnabled(true);        // TODO add your handling code here:
+    }
+
     String nomeSorteado[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
         "Urso", "Veado", "Vaca"};
-    
-        String nomeSorteado2[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
+
+    String nomeSorteado2[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
         "Urso", "Veado", "Vaca"};
-        
-            String nomeSorteado3[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
+
+    String nomeSorteado3[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
         "Urso", "Veado", "Vaca"};
+
     public JogarTeste3Bichos() {
         initComponents();
     }
@@ -41,9 +65,9 @@ public class JogarTeste3Bichos extends javax.swing.JFrame {
         jDialog1 = new javax.swing.JDialog();
         jOptionPane1 = new javax.swing.JOptionPane();
         jDialog2 = new javax.swing.JDialog();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        voltarButton = new javax.swing.JButton();
+        sorteioButton = new javax.swing.JButton();
+        jogarNovamenteButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         jDialog1.setTitle("Jogo do Bicho");
@@ -79,25 +103,25 @@ public class JogarTeste3Bichos extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(500, 500));
 
-        jButton1.setText("Voltar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        voltarButton.setText("Voltar");
+        voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                voltarButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Sortear");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        sorteioButton.setText("Sortear");
+        sorteioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                sorteioButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Jogar Novamente");
-        jButton3.setEnabled(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jogarNovamenteButton.setText("Jogar Novamente");
+        jogarNovamenteButton.setEnabled(false);
+        jogarNovamenteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jogarNovamenteButtonActionPerformed(evt);
             }
         });
 
@@ -110,11 +134,11 @@ public class JogarTeste3Bichos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(voltarButton)
                 .addGap(106, 106, 106)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sorteioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(jogarNovamenteButton)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(143, 143, 143)
@@ -128,9 +152,9 @@ public class JogarTeste3Bichos extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 411, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(voltarButton)
+                    .addComponent(sorteioButton)
+                    .addComponent(jogarNovamenteButton))
                 .addContainerGap())
         );
 
@@ -138,29 +162,18 @@ public class JogarTeste3Bichos extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        InicialTeste i = new InicialTeste();
-        this.dispose();
-        i.setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
+        inicial();     // TODO add your handling code here:
+    }//GEN-LAST:event_voltarButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void sorteioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sorteioButtonActionPerformed
 
-        jButton1.setText("Inicio");
-        Random r = new Random();
-        int idx = r.nextInt(nomeSorteado.length);
-        int idx2 = r.nextInt(nomeSorteado2.length);
-        int idx3 = r.nextInt(nomeSorteado3.length);
-        // lblbicho.setText(nomeSorteado[idx]);
-        jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: \n\n" + nomeSorteado[idx]+",  "+nomeSorteado2[idx2]+" e "+nomeSorteado3[idx3]);
-        jButton1.setEnabled(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        Jogar3Bichos();
+    }//GEN-LAST:event_sorteioButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        EscolherModoTeste e = new EscolherModoTeste();
-        this.dispose();
-        e.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void jogarNovamenteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarNovamenteButtonActionPerformed
+        JogarNovamente();
+    }//GEN-LAST:event_jogarNovamenteButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,12 +211,12 @@ public class JogarTeste3Bichos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JOptionPane jOptionPane1;
+    private javax.swing.JButton jogarNovamenteButton;
+    private javax.swing.JButton sorteioButton;
+    private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }
