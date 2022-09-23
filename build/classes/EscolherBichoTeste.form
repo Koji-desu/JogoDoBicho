@@ -204,6 +204,7 @@
         <Property name="text" type="java.lang.String" value="Avestruz"/>
       </Properties>
       <Events>
+        <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="cbAvestruzAncestorAdded"/>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cbAvestruzMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbAvestruzActionPerformed"/>
       </Events>

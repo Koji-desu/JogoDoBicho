@@ -12,6 +12,11 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
     /**
      * Creates new form EscolherBichoTeste
      */
+    public static void contador(){
+        for(int i = 1; i<=5; i++){
+            
+        }
+    }
     public EscolherBichoTeste() {
         initComponents();
     }
@@ -80,6 +85,15 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
 
         cbAvestruz.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbAvestruz.setText("Avestruz");
+        cbAvestruz.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                cbAvestruzAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         cbAvestruz.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cbAvestruzMouseClicked(evt);
@@ -295,6 +309,10 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
     private void cbAvestruzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAvestruzActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbAvestruzActionPerformed
+
+    private void cbAvestruzAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_cbAvestruzAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbAvestruzAncestorAdded
 
     /**
      * @param args the command line arguments
