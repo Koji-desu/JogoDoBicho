@@ -130,7 +130,7 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         String escolhido;
         escolhido = escolha1.getSelectedItem() + "";
         jOptionPane1.setMessage("aaa");
-        jOptionPane1.showMessageDialog(null, "Você escolheu o " + escolhido);
+        jOptionPane1.showMessageDialog(null, "Você escolheu " + escolhido);
         Jogar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
