@@ -12,11 +12,19 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
     /**
      * Creates new form EscolherBichoTeste
      */
-    public static void contador(){
-        for(int i = 1; i<=5; i++){
-            
+    public void Jogar() {
+        JogarTeste t = new JogarTeste();
+        this.dispose();
+        t.setVisible(true);
+
+    }
+
+    public static void contador() {
+        for (int i = 1; i <= 5; i++) {
+
         }
     }
+
     public EscolherBichoTeste() {
         initComponents();
     }
@@ -34,33 +42,9 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         jOptionPane1 = new javax.swing.JOptionPane();
         jPopupMenu1 = new javax.swing.JPopupMenu();
         jLabel1 = new javax.swing.JLabel();
-        cbAvestruz = new javax.swing.JCheckBox();
-        cbAguia = new javax.swing.JCheckBox();
-        cbBurro = new javax.swing.JCheckBox();
-        cbBorboleta = new javax.swing.JCheckBox();
-        cbCachorro = new javax.swing.JCheckBox();
-        cbCabra = new javax.swing.JCheckBox();
-        cbCarneiro = new javax.swing.JCheckBox();
-        cbCamelo = new javax.swing.JCheckBox();
-        cbCobra = new javax.swing.JCheckBox();
-        cbCoelho = new javax.swing.JCheckBox();
-        cbCavalo = new javax.swing.JCheckBox();
-        cbElefante = new javax.swing.JCheckBox();
-        cbGalo = new javax.swing.JCheckBox();
-        cbGato = new javax.swing.JCheckBox();
-        cbJacare = new javax.swing.JCheckBox();
-        cbLeao = new javax.swing.JCheckBox();
-        cbMacaco = new javax.swing.JCheckBox();
-        cbPorco = new javax.swing.JCheckBox();
-        cbPavao = new javax.swing.JCheckBox();
-        cbPeru = new javax.swing.JCheckBox();
-        cbTouro = new javax.swing.JCheckBox();
-        cbTigre = new javax.swing.JCheckBox();
-        cbUrso = new javax.swing.JCheckBox();
-        cbVeado = new javax.swing.JCheckBox();
-        cbVaca = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        escolha1 = new javax.swing.JComboBox<>();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -81,101 +65,7 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(500, 500));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("Escolha seus bichos");
-
-        cbAvestruz.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbAvestruz.setText("Avestruz");
-        cbAvestruz.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                cbAvestruzAncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        cbAvestruz.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cbAvestruzMouseClicked(evt);
-            }
-        });
-        cbAvestruz.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbAvestruzActionPerformed(evt);
-            }
-        });
-
-        cbAguia.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbAguia.setText("Aguia");
-
-        cbBurro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbBurro.setText("Burro");
-
-        cbBorboleta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbBorboleta.setText("Borboleta");
-
-        cbCachorro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbCachorro.setText("Cachorro");
-
-        cbCabra.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbCabra.setText("Cabra");
-
-        cbCarneiro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbCarneiro.setText("Carneiro");
-
-        cbCamelo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbCamelo.setText("Camelo");
-
-        cbCobra.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbCobra.setText("Cobra");
-
-        cbCoelho.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbCoelho.setText("Coelho");
-
-        cbCavalo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbCavalo.setText("Cavalo");
-
-        cbElefante.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbElefante.setText("Elefante");
-
-        cbGalo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbGalo.setText("Galo");
-
-        cbGato.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbGato.setText("Gato");
-
-        cbJacare.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbJacare.setText("Jacaré");
-
-        cbLeao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbLeao.setText("Leão");
-
-        cbMacaco.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbMacaco.setText("Macaco");
-
-        cbPorco.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbPorco.setText("Porco");
-
-        cbPavao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbPavao.setText("Pavão");
-
-        cbPeru.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbPeru.setText("Peru");
-
-        cbTouro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbTouro.setText("Touro");
-
-        cbTigre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbTigre.setText("Tigre");
-
-        cbUrso.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbUrso.setText("Urso");
-
-        cbVeado.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbVeado.setText("Veado");
-
-        cbVaca.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbVaca.setText("Vaca");
+        jLabel1.setText("Escolha seu bicho");
 
         jButton1.setText("Avançar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -186,6 +76,8 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
 
         jButton2.setText("Voltar");
 
+        escolha1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -193,100 +85,26 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(142, 142, 142)
+                        .addGap(64, 64, 64)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(222, 222, 222)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(159, 159, 159)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cbAguia)
-                                    .addComponent(cbAvestruz)
-                                    .addComponent(cbBurro)
-                                    .addComponent(cbBorboleta)
-                                    .addComponent(cbCachorro)
-                                    .addComponent(cbCabra))
-                                .addGap(24, 24, 24)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(cbCarneiro)
-                                            .addComponent(cbCoelho)
-                                            .addComponent(cbCavalo)
-                                            .addComponent(cbElefante)
-                                            .addComponent(cbGalo))
-                                        .addGap(46, 46, 46))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(cbGato)
-                                        .addGap(66, 66, 66)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cbCobra)
-                                    .addComponent(cbJacare)
-                                    .addComponent(cbLeao)
-                                    .addComponent(cbVaca)
-                                    .addComponent(cbVeado)
-                                    .addComponent(cbUrso)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(64, 64, 64)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbTigre)
-                            .addComponent(cbTouro)
-                            .addComponent(cbPavao)
-                            .addComponent(cbPeru)
-                            .addComponent(cbPorco)
-                            .addComponent(cbMacaco)
-                            .addComponent(jButton1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(cbCamelo)))
+                        .addGap(207, 207, 207)
+                        .addComponent(escolha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel1)
-                .addGap(89, 89, 89)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbAvestruz)
-                    .addComponent(cbCarneiro)
-                    .addComponent(cbMacaco)
-                    .addComponent(cbUrso))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbAguia)
-                    .addComponent(cbCoelho)
-                    .addComponent(cbPorco)
-                    .addComponent(cbVeado))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbBurro)
-                    .addComponent(cbCavalo)
-                    .addComponent(cbPeru)
-                    .addComponent(cbVaca))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbBorboleta)
-                    .addComponent(cbElefante)
-                    .addComponent(cbPavao)
-                    .addComponent(cbLeao))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbCachorro)
-                    .addComponent(cbGalo)
-                    .addComponent(cbTouro)
-                    .addComponent(cbJacare))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbCabra)
-                    .addComponent(cbGato)
-                    .addComponent(cbTigre)
-                    .addComponent(cbCobra))
-                .addGap(18, 18, 18)
-                .addComponent(cbCamelo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGap(74, 74, 74)
+                .addComponent(escolha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
@@ -297,22 +115,13 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cbAvestruzMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbAvestruzMouseClicked
-
-    }//GEN-LAST:event_cbAvestruzMouseClicked
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String escolhido;
+        escolhido = escolha1.getSelectedItem() + "";
         jOptionPane1.setMessage("aaa");
-        jOptionPane1.showMessageDialog(null, "123");
+        jOptionPane1.showMessageDialog(null, "Você escolheu o " + escolhido);
+        Jogar();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void cbAvestruzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAvestruzActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbAvestruzActionPerformed
-
-    private void cbAvestruzAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_cbAvestruzAncestorAdded
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbAvestruzAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -344,37 +153,14 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+
                 new EscolherBichoTeste().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox cbAguia;
-    private javax.swing.JCheckBox cbAvestruz;
-    private javax.swing.JCheckBox cbBorboleta;
-    private javax.swing.JCheckBox cbBurro;
-    private javax.swing.JCheckBox cbCabra;
-    private javax.swing.JCheckBox cbCachorro;
-    private javax.swing.JCheckBox cbCamelo;
-    private javax.swing.JCheckBox cbCarneiro;
-    private javax.swing.JCheckBox cbCavalo;
-    private javax.swing.JCheckBox cbCobra;
-    private javax.swing.JCheckBox cbCoelho;
-    private javax.swing.JCheckBox cbElefante;
-    private javax.swing.JCheckBox cbGalo;
-    private javax.swing.JCheckBox cbGato;
-    private javax.swing.JCheckBox cbJacare;
-    private javax.swing.JCheckBox cbLeao;
-    private javax.swing.JCheckBox cbMacaco;
-    private javax.swing.JCheckBox cbPavao;
-    private javax.swing.JCheckBox cbPeru;
-    private javax.swing.JCheckBox cbPorco;
-    private javax.swing.JCheckBox cbTigre;
-    private javax.swing.JCheckBox cbTouro;
-    private javax.swing.JCheckBox cbUrso;
-    private javax.swing.JCheckBox cbVaca;
-    private javax.swing.JCheckBox cbVeado;
+    private javax.swing.JComboBox<String> escolha1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JDialog jDialog1;

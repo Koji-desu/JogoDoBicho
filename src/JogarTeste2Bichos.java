@@ -5,7 +5,6 @@ import java.util.Random;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author Koji
@@ -16,10 +15,21 @@ public class JogarTeste2Bichos extends javax.swing.JFrame {
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
         "Urso", "Veado", "Vaca"};
-        String nomeSorteado2[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
+    String nomeSorteado2[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
         "Urso", "Veado", "Vaca"};
+
+    
+    public void Sortear(){
+        jButton1.setText("Inicio");
+        Random r = new Random();
+        int idx = r.nextInt(nomeSorteado.length);
+        int idx2 = r.nextInt(nomeSorteado2.length);
+        // lblbicho.setText(nomeSorteado[idx]);    
+        jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: \n\n" + nomeSorteado[idx]+" e "+nomeSorteado2[idx2]);
+        jButton3.setEnabled(true);  
+    }
     public JogarTeste2Bichos() {
         initComponents();
     }
@@ -149,14 +159,8 @@ public class JogarTeste2Bichos extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-        jButton1.setText("Inicio");
-        Random r = new Random();
-        int idx = r.nextInt(nomeSorteado.length);
-        int idx2 = r.nextInt(nomeSorteado2.length);
-        // lblbicho.setText(nomeSorteado[idx]);    
-        jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: \n\n" + nomeSorteado[idx]+" e "+nomeSorteado2[idx2]);
-        jButton3.setEnabled(true);        // TODO add your handling code here:
+        Sortear();
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
