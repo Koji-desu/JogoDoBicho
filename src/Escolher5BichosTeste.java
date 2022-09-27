@@ -12,6 +12,21 @@ public class Escolher5BichosTeste extends javax.swing.JFrame {
     /**
      * Creates new form Escolher5BichosTeste
      */
+            
+
+    public void Jogar() {
+        JogarTeste5Bichos t = new JogarTeste5Bichos();
+        this.dispose();
+        t.setVisible(true);
+
+}
+
+public void voltar() {
+        EscolherModoTeste m = new EscolherModoTeste();
+        this.dispose();
+        m.setVisible(true);
+    }
+
     public void escolhasPadrao() {
         escolha2.setSelectedIndex(1);
         escolha3.setSelectedIndex(2);
@@ -61,6 +76,11 @@ public class Escolher5BichosTeste extends javax.swing.JFrame {
         escolha5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca" }));
 
         jButton2.setText("Voltar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Avançar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +149,13 @@ public class Escolher5BichosTeste extends javax.swing.JFrame {
 
         jOptionPane1.setMessage("aaa");
         jOptionPane1.showMessageDialog(null, "Seus bichos escolhidos foram: \n\n" + escolhido1 + "\n" + escolhido2 + "\n" + escolhido3 + "\n" + escolhido4 + "\n" + escolhido5);
+        Jogar();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        voltar();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,16 +171,28 @@ public class Escolher5BichosTeste extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                }
+
+}
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Escolher5BichosTeste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Escolher5BichosTeste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Escolher5BichosTeste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Escolher5BichosTeste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Escolher5BichosTeste.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Escolher5BichosTeste.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Escolher5BichosTeste.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Escolher5BichosTeste.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 

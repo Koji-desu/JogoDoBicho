@@ -153,7 +153,7 @@ public class JogarTeste3Bichos extends javax.swing.JFrame {
         int idx3 = r.nextInt(nomeSorteado3.length);
         // lblbicho.setText(nomeSorteado[idx]);
         jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: \n\n" + nomeSorteado[idx]+",  "+nomeSorteado2[idx2]+" e "+nomeSorteado3[idx3]);
-        jButton1.setEnabled(true);        // TODO add your handling code here:
+        jButton3.setEnabled(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

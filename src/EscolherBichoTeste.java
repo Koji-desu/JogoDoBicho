@@ -12,6 +12,12 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
     /**
      * Creates new form EscolherBichoTeste
      */
+    public void voltar() {
+        EscolherModoTeste m = new EscolherModoTeste();
+        this.dispose();
+        m.setVisible(true);
+    }
+
     public void Jogar() {
         JogarTeste t = new JogarTeste();
         this.dispose();
@@ -75,6 +81,11 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         });
 
         jButton2.setText("Voltar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         escolha1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca" }));
 
@@ -122,6 +133,11 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         jOptionPane1.showMessageDialog(null, "Você escolheu o " + escolhido);
         Jogar();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        voltar();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

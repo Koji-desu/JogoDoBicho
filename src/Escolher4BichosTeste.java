@@ -12,6 +12,19 @@ public class Escolher4BichosTeste extends javax.swing.JFrame {
     /**
      * Creates new form Escolher4BichosTeste
      */
+    public void Jogar() {
+        JogarTeste4Bichos t = new JogarTeste4Bichos();
+        this.dispose();
+        t.setVisible(true);
+
+    }
+
+    public void voltar() {
+        EscolherModoTeste m = new EscolherModoTeste();
+        this.dispose();
+        m.setVisible(true);
+    }
+
     public void escolhasPadrao() {
         escolha1.setSelectedIndex(0);
         escolha2.setSelectedIndex(1);
@@ -61,6 +74,11 @@ public class Escolher4BichosTeste extends javax.swing.JFrame {
         });
 
         jButton2.setText("Voltar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         escolha4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca" }));
 
@@ -128,7 +146,13 @@ public class Escolher4BichosTeste extends javax.swing.JFrame {
 
         jOptionPane1.setMessage("aaa");
         jOptionPane1.showMessageDialog(null, "Seus bichos escolhidos foram: \n\n" + escolhido1 + "\n" + escolhido2 + "\n" + escolhido3 + "\n" + escolhido4);
+        Jogar();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        voltar();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

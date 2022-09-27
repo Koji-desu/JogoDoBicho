@@ -12,6 +12,7 @@ public class EscolherModoTeste extends javax.swing.JFrame {
     /**
      * Creates new form EscolherModoTeste
      */
+
     public void inicial() {
         InicialTeste i = new InicialTeste();
         this.dispose();
@@ -20,27 +21,27 @@ public class EscolherModoTeste extends javax.swing.JFrame {
 
     public void Escolhas() {
         if (jRadioButton1.isSelected()) {
-            JogarTeste t = new JogarTeste();
+            EscolherBichoTeste t = new EscolherBichoTeste();
             this.dispose();
             t.setVisible(true);
 
         } else if (jRadioButton2.isSelected()) {
-            JogarTeste2Bichos t = new JogarTeste2Bichos();
+            Escolher2BichosTeste t = new Escolher2BichosTeste();
             this.dispose();
             t.setVisible(true);
 
         } else if (jRadioButton3.isSelected()) {
-            JogarTeste3Bichos t = new JogarTeste3Bichos();
+            Escolher3BichosTeste t = new Escolher3BichosTeste();
             this.dispose();
             t.setVisible(true);
 
         } else if (jRadioButton4.isSelected()) {
-            JogarTeste4Bichos t = new JogarTeste4Bichos();
+            Escolher4BichosTeste t = new Escolher4BichosTeste();
             this.dispose();
             t.setVisible(true);
 
         } else if (jRadioButton5.isSelected()) {
-            JogarTeste5Bichos t = new JogarTeste5Bichos();
+            Escolher5BichosTeste t = new Escolher5BichosTeste();
             this.dispose();
             t.setVisible(true);
         }
@@ -135,18 +136,19 @@ public class EscolherModoTeste extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(199, 199, 199)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jToggleButton2)
-                            .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton5)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton3))))
-                .addContainerGap(202, Short.MAX_VALUE))
+                            .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jRadioButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton1)
+                                .addComponent(jRadioButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(182, 182, 182)
+                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
