@@ -16,6 +16,7 @@ public class JogarTeste extends javax.swing.JFrame {
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
         "Urso", "Veado", "Vaca"};
 
+
     public JogarTeste() {
         initComponents();
     }
@@ -130,7 +131,8 @@ public class JogarTeste extends javax.swing.JFrame {
         Random r = new Random();
         int idx = r.nextInt(nomeSorteado.length);
         // lblbicho.setText(nomeSorteado[idx]);    
-        jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx]);
+        
+        jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx]+"\n\n");
         jButton3.setEnabled(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 

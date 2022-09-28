@@ -126,11 +126,15 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    public  String bichoEscolhido(){
+        String bicho;
+        bicho = escolha1.getSelectedItem()+"";
+        return bicho;
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String escolhido;
-        escolhido = escolha1.getSelectedItem() + "";
+
         jOptionPane1.setMessage("aaa");
-        jOptionPane1.showMessageDialog(null, "Você escolheu " + escolhido);
+        jOptionPane1.showMessageDialog(null, "Você escolheu " + bichoEscolhido());
         Jogar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
