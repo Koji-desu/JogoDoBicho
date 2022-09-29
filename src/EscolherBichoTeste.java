@@ -14,11 +14,12 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
     /**
      * Creates new form EscolherBichoTeste
      */
-    String nomeSorteado[] = {"Avestruz" /*, "Águia", "Burro", "Borboleta", "Cachorro",*/
-//       "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
-//        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
-//        "Urso", "Veado", "Vaca"};
-    };
+    String nomeSorteado[] = {
+        "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
+        "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
+        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", 
+        "Tigre", "Urso", "Veado", "Vaca" }; 
+
     public void voltar() {
         EscolherModoTeste m = new EscolherModoTeste();
         this.dispose();
@@ -143,7 +144,7 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
- 
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
         jOptionPane1.setMessage("aaa");
@@ -166,7 +167,9 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         bicho = escolha1.getSelectedItem() + "";
 
         if (nomeSorteado[idx].equals(bicho)) {
-            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx] + "\n\n"+"Você... ACERTOOOUU!!!");
+            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx] + "\n\n" + "Você... ACERTOOOUU!!!");
+        } else {
+            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: "+ nomeSorteado[idx]+ "\n\n" + "Você... Errou, Tente novamente :(");
         }
         jButton2.setEnabled(true);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -188,13 +191,17 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EscolherBichoTeste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EscolherBichoTeste.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EscolherBichoTeste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EscolherBichoTeste.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EscolherBichoTeste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EscolherBichoTeste.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EscolherBichoTeste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EscolherBichoTeste.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
