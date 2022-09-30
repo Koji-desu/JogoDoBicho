@@ -7,11 +7,31 @@
  *
  * @author Koji
  */
+import java.util.Random;
+
 public class Escolher3BichosTeste extends javax.swing.JFrame {
 
     /**
      * Creates new form Escolher3BichosTeste
      */
+    String nomeSorteado[] = {"Avestruz", "Águia", "Burro"/*, "Borboleta", "Cachorro",
+        "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
+        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
+        "Urso", "Veado", "Vaca"*/
+    };
+
+    String nomeSorteado2[] = {"Avestruz", "Águia", "Burro"/*, "Borboleta", "Cachorro",
+        "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
+        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
+        "Urso", "Veado", "Vaca"*/
+    };
+
+    String nomeSorteado3[] = {"Avestruz", "Águia", "Burro"/*, "Borboleta", "Cachorro",
+        "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
+        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
+        "Urso", "Veado", "Vaca"*/
+    };
+
     public void Jogar() {
         JogarTeste3Bichos t = new JogarTeste3Bichos();
         this.dispose();
@@ -53,6 +73,7 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
         escolha2 = new javax.swing.JComboBox<>();
         escolha1 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(500, 500));
@@ -81,6 +102,13 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Escolha seus bichos");
 
+        jButton3.setText("Sortear");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,6 +116,8 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52))
@@ -118,7 +148,8 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
                 .addGap(105, 105, 105)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addContainerGap(87, Short.MAX_VALUE))
         );
 
@@ -141,6 +172,56 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
         // TODO add your handling code here:
         voltar();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        jButton1.setText("Inicio");
+        Random r = new Random();
+        int idx = r.nextInt(nomeSorteado.length);
+        int idx2 = r.nextInt(nomeSorteado2.length);
+        int idx3 = r.nextInt(nomeSorteado3.length);
+
+        String bicho1, bicho2, bicho3;
+        bicho1 = escolha1.getSelectedItem() + "";
+        bicho2 = escolha2.getSelectedItem() + "";
+        bicho3 = escolha3.getSelectedItem() + "";
+
+        if (nomeSorteado[idx].equals(bicho1) && nomeSorteado2[idx2].equals(bicho2) && nomeSorteado3[idx3].equals(bicho3)
+         || nomeSorteado[idx].equals(bicho1) && nomeSorteado2[idx2].equals(bicho3) && nomeSorteado3[idx3].equals(bicho2)
+         || nomeSorteado[idx].equals(bicho2) && nomeSorteado2[idx2].equals(bicho1) && nomeSorteado3[idx3].equals(bicho3)
+         || nomeSorteado[idx].equals(bicho2) && nomeSorteado2[idx2].equals(bicho3) && nomeSorteado3[idx3].equals(bicho1)
+         || nomeSorteado[idx].equals(bicho3) && nomeSorteado2[idx2].equals(bicho2) && nomeSorteado3[idx3].equals(bicho1)
+         || nomeSorteado[idx].equals(bicho3) && nomeSorteado2[idx2].equals(bicho1) && nomeSorteado3[idx3].equals(bicho2)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 3 acertos\n Parabéns premio máximo!");
+
+            
+        } else if (nomeSorteado[idx].equals(bicho1) && nomeSorteado2[idx2].equals(bicho2) && nomeSorteado3[idx3].equals(bicho1) 
+                || nomeSorteado[idx].equals(bicho2) && nomeSorteado2[idx2].equals(bicho1) && nomeSorteado[idx].equals(bicho1)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+
+        } else if (nomeSorteado2[idx2].equals(bicho2) && nomeSorteado[idx].equals(bicho3) && nomeSorteado3[idx3].equals(bicho1) 
+                || nomeSorteado2[idx2].equals(bicho3) && nomeSorteado3[idx3].equals(bicho2) && nomeSorteado3[idx3].equals(bicho1) ) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+
+        } else if (nomeSorteado3[idx3].equals(bicho3) && nomeSorteado2[idx2].equals(bicho2) || nomeSorteado3[idx3].equals(bicho3) && nomeSorteado[idx].equals(bicho1)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+
+        } else if (nomeSorteado[idx].equals(bicho3) && nomeSorteado2[idx2].equals(bicho2)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+        } else if (nomeSorteado[idx].equals(bicho1) && nomeSorteado2[idx2].equals(bicho3)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+
+        } else if (nomeSorteado[idx].equals(bicho1) || nomeSorteado[idx].equals(bicho2) || nomeSorteado[idx].equals(bicho3)
+                || nomeSorteado2[idx2].equals(bicho1) || nomeSorteado2[idx2].equals(bicho2) || nomeSorteado2[idx2].equals(bicho3)
+                || nomeSorteado3[idx3].equals(bicho1) || nomeSorteado3[idx3].equals(bicho2) || nomeSorteado3[idx3].equals(bicho3)) { // IF de 1 acerto
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n1 de 3 acertos");
+
+        } else {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... Errou, Tente novamente :(");
+        }
+
+        jButton3.setEnabled(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,6 +264,7 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> escolha3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JOptionPane jOptionPane1;
     // End of variables declaration//GEN-END:variables
