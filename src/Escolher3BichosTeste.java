@@ -14,19 +14,7 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
     /**
      * Creates new form Escolher3BichosTeste
      */
-    String nomeSorteado[] = {"Avestruz", "Águia", "Burro"/*, "Borboleta", "Cachorro",
-        "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
-        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
-        "Urso", "Veado", "Vaca"*/
-    };
-
-    String nomeSorteado2[] = {"Avestruz", "Águia", "Burro"/*, "Borboleta", "Cachorro",
-        "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
-        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
-        "Urso", "Veado", "Vaca"*/
-    };
-
-    String nomeSorteado3[] = {"Avestruz", "Águia", "Burro"/*, "Borboleta", "Cachorro",
+    String nomeSorteado[] = {"Avestruz", "Aguia", "Burro"/*, "Borboleta", "Cachorro",
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
         "Urso", "Veado", "Vaca"*/
@@ -93,11 +81,16 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
             }
         });
 
-        escolha3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca" }));
+        escolha3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avestruz", "Aguia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacare", "Leao", "Macaco", "Porco", "Pavao", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca" }));
 
-        escolha2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca" }));
+        escolha2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avestruz", "Aguia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacare", "Leao", "Macaco", "Porco", "Pavao", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca" }));
 
-        escolha1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca" }));
+        escolha1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avestruz", "Aguia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacare", "Leao", "Macaco", "Porco", "Pavao", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca" }));
+        escolha1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                escolha1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Escolha seus bichos");
@@ -178,50 +171,53 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
         jButton1.setText("Inicio");
         Random r = new Random();
         int idx = r.nextInt(nomeSorteado.length);
-        int idx2 = r.nextInt(nomeSorteado2.length);
-        int idx3 = r.nextInt(nomeSorteado3.length);
+        int idx2 = r.nextInt(nomeSorteado.length);
+        int idx3 = r.nextInt(nomeSorteado.length);
 
         String bicho1, bicho2, bicho3;
         bicho1 = escolha1.getSelectedItem() + "";
         bicho2 = escolha2.getSelectedItem() + "";
         bicho3 = escolha3.getSelectedItem() + "";
 
-        if (nomeSorteado[idx].equals(bicho1) && nomeSorteado2[idx2].equals(bicho2) && nomeSorteado3[idx3].equals(bicho3)
-         || nomeSorteado[idx].equals(bicho1) && nomeSorteado2[idx2].equals(bicho3) && nomeSorteado3[idx3].equals(bicho2)
-         || nomeSorteado[idx].equals(bicho2) && nomeSorteado2[idx2].equals(bicho1) && nomeSorteado3[idx3].equals(bicho3)
-         || nomeSorteado[idx].equals(bicho2) && nomeSorteado2[idx2].equals(bicho3) && nomeSorteado3[idx3].equals(bicho1)
-         || nomeSorteado[idx].equals(bicho3) && nomeSorteado2[idx2].equals(bicho2) && nomeSorteado3[idx3].equals(bicho1)
-         || nomeSorteado[idx].equals(bicho3) && nomeSorteado2[idx2].equals(bicho1) && nomeSorteado3[idx3].equals(bicho2)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 3 acertos\n Parabéns premio máximo!");
+        if (nomeSorteado[idx].equals(bicho1) && nomeSorteado[idx2].equals(bicho2) && nomeSorteado[idx3].equals(bicho3)
+                || nomeSorteado[idx].equals(bicho1) && nomeSorteado[idx2].equals(bicho3) && nomeSorteado[idx3].equals(bicho2)
+                || nomeSorteado[idx].equals(bicho2) && nomeSorteado[idx2].equals(bicho1) && nomeSorteado[idx3].equals(bicho3)
+                || nomeSorteado[idx].equals(bicho2) && nomeSorteado[idx2].equals(bicho3) && nomeSorteado[idx3].equals(bicho1)
+                || nomeSorteado[idx].equals(bicho3) && nomeSorteado[idx2].equals(bicho2) && nomeSorteado[idx3].equals(bicho1)
+                || nomeSorteado[idx].equals(bicho3) && nomeSorteado[idx2].equals(bicho1) && nomeSorteado[idx3].equals(bicho2)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 3 acertos\n Parabéns premio máximo!");
 
-            
-        } else if (nomeSorteado[idx].equals(bicho1) && nomeSorteado2[idx2].equals(bicho2) && nomeSorteado3[idx3].equals(bicho1) 
-                || nomeSorteado[idx].equals(bicho2) && nomeSorteado2[idx2].equals(bicho1) && nomeSorteado[idx].equals(bicho1)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+        } else if (nomeSorteado[idx].equals(bicho1) && nomeSorteado[idx2].equals(bicho2) && nomeSorteado[idx3].equals(bicho1)
+                || nomeSorteado[idx].equals(bicho2) && nomeSorteado[idx2].equals(bicho1) && nomeSorteado[idx3].equals(bicho1)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
 
-        } else if (nomeSorteado2[idx2].equals(bicho2) && nomeSorteado[idx].equals(bicho3) && nomeSorteado3[idx3].equals(bicho1) 
-                || nomeSorteado2[idx2].equals(bicho3) && nomeSorteado3[idx3].equals(bicho2) && nomeSorteado3[idx3].equals(bicho1) ) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+        } else if (nomeSorteado[idx2].equals(bicho1) && nomeSorteado[idx].equals(bicho2) && nomeSorteado[idx3].equals(bicho1)
+                || nomeSorteado[idx2].equals(bicho3) && nomeSorteado[idx3].equals(bicho2) && nomeSorteado[idx3].equals(bicho1)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
 
-        } else if (nomeSorteado3[idx3].equals(bicho3) && nomeSorteado2[idx2].equals(bicho2) || nomeSorteado3[idx3].equals(bicho3) && nomeSorteado[idx].equals(bicho1)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+        } else if (nomeSorteado[idx3].equals(bicho3) && nomeSorteado[idx2].equals(bicho2) || nomeSorteado[idx3].equals(bicho3) && nomeSorteado[idx].equals(bicho1)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
 
-        } else if (nomeSorteado[idx].equals(bicho3) && nomeSorteado2[idx2].equals(bicho2)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
-        } else if (nomeSorteado[idx].equals(bicho1) && nomeSorteado2[idx2].equals(bicho3)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+        } else if (nomeSorteado[idx].equals(bicho3) && nomeSorteado[idx2].equals(bicho2)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+        } else if (nomeSorteado[idx].equals(bicho1) && nomeSorteado[idx2].equals(bicho3)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
 
         } else if (nomeSorteado[idx].equals(bicho1) || nomeSorteado[idx].equals(bicho2) || nomeSorteado[idx].equals(bicho3)
-                || nomeSorteado2[idx2].equals(bicho1) || nomeSorteado2[idx2].equals(bicho2) || nomeSorteado2[idx2].equals(bicho3)
-                || nomeSorteado3[idx3].equals(bicho1) || nomeSorteado3[idx3].equals(bicho2) || nomeSorteado3[idx3].equals(bicho3)) { // IF de 1 acerto
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n1 de 3 acertos");
+                || nomeSorteado[idx2].equals(bicho1) || nomeSorteado[idx2].equals(bicho2) || nomeSorteado[idx2].equals(bicho3)
+                || nomeSorteado[idx3].equals(bicho1) || nomeSorteado[idx3].equals(bicho2) || nomeSorteado[idx3].equals(bicho3)) { // IF de 1 acerto
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n1 de 3 acertos");
 
         } else {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado2[idx2] + " e " + nomeSorteado3[idx3] + "\n\n" + "Você... Errou, Tente novamente :(");
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... Errou, Tente novamente :(");
         }
 
         jButton3.setEnabled(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void escolha1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escolha1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_escolha1ActionPerformed
 
     /**
      * @param args the command line arguments

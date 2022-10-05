@@ -17,10 +17,10 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
     String nomeSorteado[] = {
         "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
-        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", 
-        "Tigre", "Urso", "Veado", "Vaca" }; 
+        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro",
+        "Tigre", "Urso", "Veado", "Vaca"};
 
-    public void voltar() {
+    public void Voltar() {
         EscolherModoTeste m = new EscolherModoTeste();
         this.dispose();
         m.setVisible(true);
@@ -33,10 +33,28 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
 
     }
 
-    public static void contador() {
-        for (int i = 1; i <= 5; i++) {
+    public void Inicio() {
+        InicialTeste i = new InicialTeste();
+        this.dispose();
+        i.setVisible(true);
+    }
 
+    public void Sortear() {
+        Random r = new Random();
+        int idx = r.nextInt(nomeSorteado.length);
+        // lblbicho.setText(nomeSorteado[idx]);
+        String bicho;
+        bicho = escolha1.getSelectedItem() + "";
+
+        if (nomeSorteado[idx].equals(bicho)) {
+            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx] + "\n\n" + "Você... ACERTOOOUU!!!");
+        } else {
+            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx] + "\n\n" + "Você... Errou, Tente novamente :(");
         }
+
+        jButton1.setEnabled(true);
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(true);
     }
 
     public EscolherBichoTeste() {
@@ -56,10 +74,10 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         jOptionPane1 = new javax.swing.JOptionPane();
         jPopupMenu1 = new javax.swing.JPopupMenu();
         jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         escolha1 = new javax.swing.JComboBox<>();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -82,14 +100,8 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Escolha seu bicho");
 
-        jButton3.setText("Avançar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Voltar");
+        jButton1.setText("Inicio");
+        jButton1.setEnabled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -105,6 +117,14 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setText("Jogar Novamente");
+        jButton3.setEnabled(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -112,19 +132,20 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(63, 63, 63)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(159, 159, 159)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(207, 207, 207)
                         .addComponent(escolha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(27, 27, 27))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,8 +157,8 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addGap(59, 59, 59))
         );
 
@@ -145,34 +166,21 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
-        jOptionPane1.setMessage("aaa");
-        jOptionPane1.showMessageDialog(null, "Você escolheu ");
-        Jogar();
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        voltar();
+        Inicio();
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        jButton3.setText("Inicio");
-        Random r = new Random();
-        int idx = r.nextInt(nomeSorteado.length);
-        // lblbicho.setText(nomeSorteado[idx]);
-        String bicho;
-        bicho = escolha1.getSelectedItem() + "";
-
-        if (nomeSorteado[idx].equals(bicho)) {
-            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx] + "\n\n" + "Você... ACERTOOOUU!!!");
-        } else {
-            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: "+ nomeSorteado[idx]+ "\n\n" + "Você... Errou, Tente novamente :(");
-        }
-        jButton2.setEnabled(true);
+        Sortear();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Voltar();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

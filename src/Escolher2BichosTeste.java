@@ -19,23 +19,12 @@ public class Escolher2BichosTeste extends javax.swing.JFrame {
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
         "Urso", "Veado", "Vaca"
     };
-    String nomeSorteado2[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
-        "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
-        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
-        "Urso", "Veado", "Vaca"
-    };
 
     public void Jogar() {
         JogarTeste2Bichos t = new JogarTeste2Bichos();
         this.dispose();
         t.setVisible(true);
 
-    }
-
-    public void voltar() {
-        EscolherModoTeste m = new EscolherModoTeste();
-        this.dispose();
-        m.setVisible(true);
     }
 
     public void escolhasPadrao() {
@@ -49,25 +38,39 @@ public class Escolher2BichosTeste extends javax.swing.JFrame {
         escolhasPadrao();
     }
 
+    public void Voltar() {
+        EscolherModoTeste m = new EscolherModoTeste();
+        this.dispose();
+        m.setVisible(true);
+    }
+
+    public void Inicio() {
+        InicialTeste i = new InicialTeste();
+        this.dispose();
+        i.setVisible(true);
+    }
+
     public void Sortear() {
         jButton1.setText("Inicio");
         Random r = new Random();
         int idx = r.nextInt(nomeSorteado.length);
-        int idx2 = r.nextInt(nomeSorteado2.length);
+        int idx2 = r.nextInt(nomeSorteado.length);
         String bicho1, bicho2;
         bicho1 = escolha1.getSelectedItem() + "";
         bicho2 = escolha2.getSelectedItem() + "";
 
-        if (nomeSorteado[idx].equals(bicho1) && nomeSorteado2[idx2].equals(bicho2)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado2[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 2 acertos\n Parabéns premio máximo!");
-        } else if (nomeSorteado[idx].equals(bicho2) && nomeSorteado2[idx2].equals(bicho1)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado2[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 2 acertos\n Parabéns premio máximo!");
-        } else if (nomeSorteado[idx].equals(bicho1) || nomeSorteado[idx].equals(bicho2) || nomeSorteado2[idx2].equals(bicho1) || nomeSorteado2[idx2].equals(bicho2)) { // IF de 1 acerto
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado2[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n1 de 2 acertos");
+        if (nomeSorteado[idx].equals(bicho1) && nomeSorteado[idx2].equals(bicho2)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 2 acertos\n Parabéns premio máximo!");
+        } else if (nomeSorteado[idx].equals(bicho2) && nomeSorteado[idx2].equals(bicho1)) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 2 acertos\n Parabéns premio máximo!");
+        } else if (nomeSorteado[idx].equals(bicho1) || nomeSorteado[idx].equals(bicho2) || nomeSorteado[idx2].equals(bicho1) || nomeSorteado[idx2].equals(bicho2)) { // IF de 1 acerto
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n1 de 2 acertos");
         } else {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado2[idx2] + "\n\n" + "Você... Errou, Tente novamente :(");
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... Errou, Tente novamente :(");
         }
-
+        jButton1.setEnabled(true);
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(true);
     }
 
     /**
@@ -83,8 +86,8 @@ public class Escolher2BichosTeste extends javax.swing.JFrame {
         escolha2 = new javax.swing.JComboBox<>();
         escolha1 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -98,21 +101,23 @@ public class Escolher2BichosTeste extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Escolha seus bichos");
 
-        jButton1.setText("Avançar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Voltar");
+        jButton2.setText("Sortear");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Sortear");
+        jButton1.setText("Inicio");
+        jButton1.setEnabled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Jogar Novamente");
+        jButton3.setEnabled(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -135,13 +140,13 @@ public class Escolher2BichosTeste extends javax.swing.JFrame {
                             .addComponent(escolha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGap(35, 35, 35)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
+                .addGap(80, 80, 80)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(16, 16, 16))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,9 +159,9 @@ public class Escolher2BichosTeste extends javax.swing.JFrame {
                 .addComponent(escolha2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
+                    .addComponent(jButton2)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton3))
                 .addGap(81, 81, 81))
         );
 
@@ -164,24 +169,19 @@ public class Escolher2BichosTeste extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String escolhido1, escolhido2, escolhido3, escolhido4, escolhido5;
-        escolhido1 = escolha1.getSelectedItem() + "";
-        escolhido2 = escolha2.getSelectedItem() + "";
-
-        jOptionPane1.setMessage("aaa");
-        jOptionPane1.showMessageDialog(null, "Seus bichos escolhidos foram: \n\n" + escolhido1 + "\n" + escolhido2);
-        Jogar();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        voltar();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         Sortear();
         // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Inicio();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Voltar();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
