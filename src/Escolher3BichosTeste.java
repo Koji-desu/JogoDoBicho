@@ -178,40 +178,48 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
         bicho1 = escolha1.getSelectedItem() + "";
         bicho2 = escolha2.getSelectedItem() + "";
         bicho3 = escolha3.getSelectedItem() + "";
-
-        if (nomeSorteado[idx].equals(bicho1) && nomeSorteado[idx2].equals(bicho2) && nomeSorteado[idx3].equals(bicho3)
-                || nomeSorteado[idx].equals(bicho1) && nomeSorteado[idx2].equals(bicho3) && nomeSorteado[idx3].equals(bicho2)
-                || nomeSorteado[idx].equals(bicho2) && nomeSorteado[idx2].equals(bicho1) && nomeSorteado[idx3].equals(bicho3)
-                || nomeSorteado[idx].equals(bicho2) && nomeSorteado[idx2].equals(bicho3) && nomeSorteado[idx3].equals(bicho1)
-                || nomeSorteado[idx].equals(bicho3) && nomeSorteado[idx2].equals(bicho2) && nomeSorteado[idx3].equals(bicho1)
-                || nomeSorteado[idx].equals(bicho3) && nomeSorteado[idx2].equals(bicho1) && nomeSorteado[idx3].equals(bicho2)) {
+        int acertos = 0;
+        for(int i = 0; i < 1; i++){
+        
+            if(nomeSorteado[idx].equals(bicho1)
+                || nomeSorteado[idx].equals(bicho2)
+                || nomeSorteado[idx].equals(bicho3)
+                    ){
+                    acertos+=1;
+            }
+            
+            if(nomeSorteado[idx2].equals(bicho1)
+                || nomeSorteado[idx2].equals(bicho2)
+                || nomeSorteado[idx2].equals(bicho3)
+                    ){
+                    acertos+=1;
+            }
+            if(nomeSorteado[idx3].equals(bicho1)
+                || nomeSorteado[idx3].equals(bicho2)
+                || nomeSorteado[idx3].equals(bicho3)
+                    ){
+                    acertos+=1;
+            }
+            
+            i++;
+            
+            
+            
+        }
+        
+        if(acertos == 3) /* if de 3 acertos */ {
             jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 3 acertos\n Parabéns premio máximo!");
 
-        } else if (nomeSorteado[idx].equals(bicho1) && nomeSorteado[idx2].equals(bicho2) && nomeSorteado[idx3].equals(bicho1)
-                || nomeSorteado[idx].equals(bicho2) && nomeSorteado[idx2].equals(bicho1) && nomeSorteado[idx3].equals(bicho1)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
+        }else if(acertos == 2) /* if de 2 acertos */ {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOUU! \n\n 2 de 3 acertos\n Parabéns pelo premio!");
 
-        } else if (nomeSorteado[idx2].equals(bicho1) && nomeSorteado[idx].equals(bicho2) && nomeSorteado[idx3].equals(bicho1)
-                || nomeSorteado[idx2].equals(bicho3) && nomeSorteado[idx3].equals(bicho2) && nomeSorteado[idx3].equals(bicho1)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
-
-        } else if (nomeSorteado[idx3].equals(bicho3) && nomeSorteado[idx2].equals(bicho2) || nomeSorteado[idx3].equals(bicho3) && nomeSorteado[idx].equals(bicho1)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
-
-        } else if (nomeSorteado[idx].equals(bicho3) && nomeSorteado[idx2].equals(bicho2)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
-        } else if (nomeSorteado[idx].equals(bicho1) && nomeSorteado[idx2].equals(bicho3)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns premio máximo!");
-
-        } else if (nomeSorteado[idx].equals(bicho1) || nomeSorteado[idx].equals(bicho2) || nomeSorteado[idx].equals(bicho3)
-                || nomeSorteado[idx2].equals(bicho1) || nomeSorteado[idx2].equals(bicho2) || nomeSorteado[idx2].equals(bicho3)
-                || nomeSorteado[idx3].equals(bicho1) || nomeSorteado[idx3].equals(bicho2) || nomeSorteado[idx3].equals(bicho3)) { // IF de 1 acerto
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n1 de 3 acertos");
+        } else if (acertos == 1) { // IF de 1 acerto
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... Acertou! \n\n1 de 3 acertos");
 
         } else {
             jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... Errou, Tente novamente :(");
         }
-
+        System.out.println(acertos);
         jButton3.setEnabled(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
