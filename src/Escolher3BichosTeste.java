@@ -14,10 +14,10 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
     /**
      * Creates new form Escolher3BichosTeste
      */
-    String nomeSorteado[] = {"Avestruz", "Aguia", "Burro"/*, "Borboleta", "Cachorro",
+    String nomeSorteado[] = {"Avestruz", "Aguia", "Burro", "Borboleta", "Cachorro",
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
-        "Urso", "Veado", "Vaca"*/
+        "Urso", "Veado", "Vaca"
     };
 
     public void Jogar() {
@@ -38,6 +38,62 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
         escolha2.setSelectedIndex(1);
         escolha3.setSelectedIndex(2);
 
+    }
+    
+    public void Sortear(){
+    jButton1.setText("Inicio");
+        Random r = new Random();
+        int idx = r.nextInt(nomeSorteado.length);
+        int idx2 = r.nextInt(nomeSorteado.length);
+        int idx3 = r.nextInt(nomeSorteado.length);
+
+        String bicho1, bicho2, bicho3;
+        bicho1 = escolha1.getSelectedItem() + "";
+        bicho2 = escolha2.getSelectedItem() + "";
+        bicho3 = escolha3.getSelectedItem() + "";
+        int acertos = 0;
+        for(int i = 0; i < 1; i++){
+        
+            if(nomeSorteado[idx].equals(bicho1)
+                || nomeSorteado[idx].equals(bicho2)
+                || nomeSorteado[idx].equals(bicho3)
+                    ){
+                    acertos+=1;
+            }
+            
+            if(nomeSorteado[idx2].equals(bicho1)
+                || nomeSorteado[idx2].equals(bicho2)
+                || nomeSorteado[idx2].equals(bicho3)
+                    ){
+                    acertos+=1;
+            }
+            if(nomeSorteado[idx3].equals(bicho1)
+                || nomeSorteado[idx3].equals(bicho2)
+                || nomeSorteado[idx3].equals(bicho3)
+                    ){
+                    acertos+=1;
+            }
+            
+            i++;
+            
+            
+            
+        }
+        
+        if(acertos == 3) /* if de 3 acertos */ {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 3 acertos\n Parabéns premio máximo!");
+
+        }else if(acertos == 2) /* if de 2 acertos */ {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOUU! \n\n 2 de 3 acertos\n Parabéns pelo premio!");
+
+        } else if (acertos == 1) { // IF de 1 acerto
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... Acertou! \n\n1 de 3 acertos");
+
+        } else {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... Errou, Tente novamente :(");
+        }
+        
+        jButton3.setEnabled(true);
     }
 
     public Escolher3BichosTeste() {
@@ -168,59 +224,7 @@ public class Escolher3BichosTeste extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-        jButton1.setText("Inicio");
-        Random r = new Random();
-        int idx = r.nextInt(nomeSorteado.length);
-        int idx2 = r.nextInt(nomeSorteado.length);
-        int idx3 = r.nextInt(nomeSorteado.length);
-
-        String bicho1, bicho2, bicho3;
-        bicho1 = escolha1.getSelectedItem() + "";
-        bicho2 = escolha2.getSelectedItem() + "";
-        bicho3 = escolha3.getSelectedItem() + "";
-        int acertos = 0;
-        for(int i = 0; i < 1; i++){
-        
-            if(nomeSorteado[idx].equals(bicho1)
-                || nomeSorteado[idx].equals(bicho2)
-                || nomeSorteado[idx].equals(bicho3)
-                    ){
-                    acertos+=1;
-            }
-            
-            if(nomeSorteado[idx2].equals(bicho1)
-                || nomeSorteado[idx2].equals(bicho2)
-                || nomeSorteado[idx2].equals(bicho3)
-                    ){
-                    acertos+=1;
-            }
-            if(nomeSorteado[idx3].equals(bicho1)
-                || nomeSorteado[idx3].equals(bicho2)
-                || nomeSorteado[idx3].equals(bicho3)
-                    ){
-                    acertos+=1;
-            }
-            
-            i++;
-            
-            
-            
-        }
-        
-        if(acertos == 3) /* if de 3 acertos */ {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 3 acertos\n Parabéns premio máximo!");
-
-        }else if(acertos == 2) /* if de 2 acertos */ {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOUU! \n\n 2 de 3 acertos\n Parabéns pelo premio!");
-
-        } else if (acertos == 1) { // IF de 1 acerto
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... Acertou! \n\n1 de 3 acertos");
-
-        } else {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... Errou, Tente novamente :(");
-        }
-        System.out.println(acertos);
-        jButton3.setEnabled(true);        // TODO add your handling code here:
+        Sortear();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void escolha1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escolha1ActionPerformed

@@ -58,13 +58,29 @@ public class Escolher2BichosTeste extends javax.swing.JFrame {
         String bicho1, bicho2;
         bicho1 = escolha1.getSelectedItem() + "";
         bicho2 = escolha2.getSelectedItem() + "";
+        
+        int acertos = 0;
+        for(int i = 0; i < 1; i++){
+        
+            if(nomeSorteado[idx].equals(bicho1)
+                || nomeSorteado[idx].equals(bicho2)
+                
+                    ){
+                    acertos+=1;
+            }
+            
+            if(nomeSorteado[idx2].equals(bicho1)
+                || nomeSorteado[idx2].equals(bicho2)
+                
+                    ){
+                    acertos+=1;
+            }
+        }
 
-        if (nomeSorteado[idx].equals(bicho1) && nomeSorteado[idx2].equals(bicho2)) {
+        if (acertos == 2 ) {
             jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 2 acertos\n Parabéns premio máximo!");
-        } else if (nomeSorteado[idx].equals(bicho2) && nomeSorteado[idx2].equals(bicho1)) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 2 acertos\n Parabéns premio máximo!");
-        } else if (nomeSorteado[idx].equals(bicho1) || nomeSorteado[idx].equals(bicho2) || nomeSorteado[idx2].equals(bicho1) || nomeSorteado[idx2].equals(bicho2)) { // IF de 1 acerto
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n1 de 2 acertos");
+        } else if (acertos == 1) {
+            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... Acertou! \n\n 1 de 2 acertos\n Parabéns pelo premio!");
         } else {
             jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... Errou, Tente novamente :(");
         }
