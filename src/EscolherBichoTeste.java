@@ -87,6 +87,7 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         setTitle("Jogo Do Bicho");
         setLocation(new java.awt.Point(535, 150));
         setMinimumSize(new java.awt.Dimension(500, 500));
+        setPreferredSize(new java.awt.Dimension(500, 500));
         setResizable(false);
         setSize(new java.awt.Dimension(500, 500));
 

@@ -69,6 +69,8 @@ public void Voltar() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Jogo do Bicho");
+        setPreferredSize(new java.awt.Dimension(500, 500));
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Escolha seus bichos");
