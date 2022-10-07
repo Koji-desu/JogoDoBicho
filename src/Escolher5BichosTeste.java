@@ -21,13 +21,6 @@ public class Escolher5BichosTeste extends javax.swing.JFrame {
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro",
         "Tigre", "Urso", "Veado", "Vaca"};
 
-    public void Jogar() {
-        JogarTeste5Bichos t = new JogarTeste5Bichos();
-        this.dispose();
-        t.setVisible(true);
-
-}
-
 public void Voltar() {
         EscolherModoTeste m = new EscolherModoTeste();
         this.dispose();
@@ -248,7 +241,10 @@ public void Voltar() {
             jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " +nomeSorteado[idx4]+" e " +nomeSorteado[idx5]+"\n\n" + "Você... Errou, Tente novamente :(");
         }
 
-        jButton2.setEnabled(true);        // TODO add your handling code here:
+         jButton1.setEnabled(true); 
+        jButton2.setEnabled(false);        // TODO add your handling code here:
+
+        jButton3.setEnabled(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

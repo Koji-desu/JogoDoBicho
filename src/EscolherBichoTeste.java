@@ -25,14 +25,7 @@ public class EscolherBichoTeste extends javax.swing.JFrame {
         this.dispose();
         m.setVisible(true);
     }
-
-    public void Jogar() {
-        JogarTeste t = new JogarTeste();
-        this.dispose();
-        t.setVisible(true);
-
-    }
-
+    
     public void Inicio() {
         InicialTeste i = new InicialTeste();
         this.dispose();

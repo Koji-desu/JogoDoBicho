@@ -20,13 +20,6 @@ public class Escolher2BichosTeste extends javax.swing.JFrame {
         "Urso", "Veado", "Vaca"
     };
 
-    public void Jogar() {
-        JogarTeste2Bichos t = new JogarTeste2Bichos();
-        this.dispose();
-        t.setVisible(true);
-
-    }
-
     public void escolhasPadrao() {
         escolha1.setSelectedIndex(0);
         escolha2.setSelectedIndex(1);
