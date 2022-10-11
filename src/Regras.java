@@ -54,7 +54,7 @@ public class Regras extends javax.swing.JFrame {
         jTextArea2.setColumns(20);
         jTextArea2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextArea2.setRows(5);
-        jTextArea2.setText("O jogo consiste em fazer apostas, escolhendo os bichos\ne sendo recompensado por acertar o sorteio\n\nAposta pode ser feita de diversas formas, na qual você\nsera recompensado pela dificuldade da sua aposta\nganhando mais na aposta dificil e menos na aposta mais facil\n\nO premio máximo é 100 coins por bicho acertado dividido pela quantidade\nde animal apostado.\n\nSendo assim se você jogou em 3 bichos e acertou somente um bicho\nseu premio é 100/3 que da 33 coins. Mas se você apostar em 5 e acertar\nos 5 bichos seu premio é 500/5 que da 100 coins\n");
+        jTextArea2.setText("O jogo consiste em fazer apostas, escolhendo os bichos\ne sendo recompensado por acertar o sorteio\n\nAposta pode ser feita de diversas formas, na qual você\nsera recompensado pela dificuldade da sua aposta\nganhando mais na aposta dificil e menos na aposta mais facil\n\nO premio máximo é 100 coins por bicho acertado dividido pela \nquantidade de animal apostado.\n\nSendo assim se você jogou em 3 bichos e acertou somente um bicho\nseu premio é 100/3 que da 33 coins. Mas se você apostar \nem 5 e acertar os 5 bichos seu premio é 500/5 que da 100 coins\n");
         jTextArea2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextArea2.setEnabled(false);
         jScrollPane2.setViewportView(jTextArea2);

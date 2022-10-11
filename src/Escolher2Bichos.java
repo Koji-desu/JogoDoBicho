@@ -14,10 +14,10 @@ public class Escolher2Bichos extends javax.swing.JFrame {
     /**
      * Creates new form Escolher2BichosTeste
      */
-    String nomeSorteado[] = {"Avestruz", "Águia"/*, "Burro", "Borboleta", "Cachorro",
+    String nomeSorteado[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
-        "Urso", "Veado", "Vaca"*/
+        "Urso", "Veado", "Vaca"
     };
 
     public void escolhasPadrao() {

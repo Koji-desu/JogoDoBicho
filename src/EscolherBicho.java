@@ -41,8 +41,10 @@ public class EscolherBicho extends javax.swing.JFrame {
 
         if (nomeSorteado[idx].equals(bicho)) {
             jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx] + "\n\n" + "Você... ACERTOOOUU!!!");
+            jOptionPane1.showMessageDialog(null, "Voce ganhou 100 coins!!!");
         } else {
             jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx] + "\n\n" + "Você... Errou, Tente novamente :(");
+            jOptionPane1.showMessageDialog(null, "Voce perdeu seus coins apostados*");
         }
 
         jButton1.setEnabled(true);

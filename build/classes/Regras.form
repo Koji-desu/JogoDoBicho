@@ -103,7 +103,7 @@
               <Font name="Segoe UI" size="14" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="O jogo consiste em fazer apostas, escolhendo os bichos&#xa;e sendo recompensado por acertar o sorteio&#xa;&#xa;Aposta pode ser feita de diversas formas, na qual voc&#xea;&#xa;sera recompensado pela dificuldade da sua aposta&#xa;ganhando mais na aposta dificil e menos na aposta mais facil&#xa;&#xa;O premio m&#xe1;ximo &#xe9; 100 coins por bicho acertado dividido pela quantidade&#xa;de animal apostado.&#xa;&#xa;Sendo assim se voc&#xea; jogou em 3 bichos e acertou somente um bicho&#xa;seu premio &#xe9; 100/3 que da 33 coins. Mas se voc&#xea; apostar em 5 e acertar&#xa;os 5 bichos seu premio &#xe9; 500/5 que da 100 coins&#xa;"/>
+            <Property name="text" type="java.lang.String" value="O jogo consiste em fazer apostas, escolhendo os bichos&#xa;e sendo recompensado por acertar o sorteio&#xa;&#xa;Aposta pode ser feita de diversas formas, na qual voc&#xea;&#xa;sera recompensado pela dificuldade da sua aposta&#xa;ganhando mais na aposta dificil e menos na aposta mais facil&#xa;&#xa;O premio m&#xe1;ximo &#xe9; 100 coins por bicho acertado dividido pela &#xa;quantidade de animal apostado.&#xa;&#xa;Sendo assim se voc&#xea; jogou em 3 bichos e acertou somente um bicho&#xa;seu premio &#xe9; 100/3 que da 33 coins. Mas se voc&#xea; apostar &#xa;em 5 e acertar os 5 bichos seu premio &#xe9; 500/5 que da 100 coins&#xa;"/>
             <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
