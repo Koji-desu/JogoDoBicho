@@ -14,10 +14,10 @@ public class Escolher2Bichos extends javax.swing.JFrame {
     /**
      * Creates new form Escolher2BichosTeste
      */
-    String nomeSorteado[] = {"Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
+    String nomeSorteado[] = {"Avestruz", "Águia"/*, "Burro", "Borboleta", "Cachorro",
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre",
-        "Urso", "Veado", "Vaca"
+        "Urso", "Veado", "Vaca"*/
     };
 
     public void escolhasPadrao() {
@@ -70,13 +70,20 @@ public class Escolher2Bichos extends javax.swing.JFrame {
             }
         }
 
-        if (acertos == 2 ) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 2 acertos\n Parabéns premio máximo!");
-        } else if (acertos == 1) {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... Acertou! \n\n 1 de 2 acertos\n Parabéns pelo premio!");
-        } else {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... Errou, Tente novamente :(");
+        switch(acertos){
+            case 2:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 2 acertos\n Parabéns premio máximo!");
+                jOptionPane2.showMessageDialog(null, "+100 coins!!!");
+                break;
+            case 1:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... Acertou! \n\n 1 de 2 acertos\n Parabéns pelo premio!");
+                jOptionPane2.showMessageDialog(null, "+50 coins!!!");
+                break;
+            default:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... Errou, Tente novamente :(");
+                jOptionPane2.showMessageDialog(null, "voce perdeu seus coins apostados");
         }
+        
         jButton1.setEnabled(true);
         jButton2.setEnabled(false);
         jButton3.setEnabled(true);
@@ -92,6 +99,7 @@ public class Escolher2Bichos extends javax.swing.JFrame {
     private void initComponents() {
 
         jOptionPane1 = new javax.swing.JOptionPane();
+        jOptionPane2 = new javax.swing.JOptionPane();
         escolha2 = new javax.swing.JComboBox<>();
         escolha1 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
@@ -241,5 +249,6 @@ public class Escolher2Bichos extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JOptionPane jOptionPane1;
+    private javax.swing.JOptionPane jOptionPane2;
     // End of variables declaration//GEN-END:variables
 }

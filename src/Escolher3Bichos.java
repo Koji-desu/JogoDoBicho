@@ -78,20 +78,29 @@ public class Escolher3Bichos extends javax.swing.JFrame {
             
         }
         
-        if(acertos == 3) /* if de 3 acertos */ {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 3 acertos\n Parabéns premio máximo!");
-
-        }else if(acertos == 2) /* if de 2 acertos */ {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... ACERTOUU! \n\n 2 de 3 acertos\n Parabéns pelo premio!");
-
-        } else if (acertos == 1) { // IF de 1 acerto
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... Acertou! \n\n1 de 3 acertos");
-
-        } else {
-            jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + " e " + nomeSorteado[idx3] + "\n\n" + "Você... Errou, Tente novamente :(");
+        switch(acertos){
+            
+            case 3:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + " e "+nomeSorteado[idx3]+ "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 3 acertos\n Parabéns premio máximo!");
+                jOptionPane2.showMessageDialog(null, "+100 coins!!!");
+                break;
+            
+            case 2:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + " e "+nomeSorteado[idx3]+ "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 3 acertos\n Parabéns pelo premio!");
+                jOptionPane2.showMessageDialog(null, "+66 coins!!!");
+                break;
+            case 1:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + " e "+nomeSorteado[idx3]+ "\n\n" + "Você... Acertou! \n\n 1 de 3 acertos\n Parabéns pelo premio!");
+                jOptionPane2.showMessageDialog(null, "+33 coins!!!");
+                break;
+            default:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + " e "+nomeSorteado[idx3]+ "\n\n" + "Você... Errou, Tente novamente :(");
+                jOptionPane2.showMessageDialog(null, "voce perdeu seus coins apostados");
         }
         
-         jButton1.setEnabled(true); 
+      
+        
+        jButton1.setEnabled(true); 
         jButton2.setEnabled(false);        // TODO add your handling code here:
 
         jButton3.setEnabled(true); 
@@ -112,6 +121,7 @@ public class Escolher3Bichos extends javax.swing.JFrame {
     private void initComponents() {
 
         jOptionPane1 = new javax.swing.JOptionPane();
+        jOptionPane2 = new javax.swing.JOptionPane();
         escolha3 = new javax.swing.JComboBox<>();
         escolha2 = new javax.swing.JComboBox<>();
         escolha1 = new javax.swing.JComboBox<>();
@@ -280,5 +290,6 @@ public class Escolher3Bichos extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JOptionPane jOptionPane1;
+    private javax.swing.JOptionPane jOptionPane2;
     // End of variables declaration//GEN-END:variables
 }
