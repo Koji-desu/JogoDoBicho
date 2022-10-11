@@ -48,6 +48,88 @@ public class Escolher4Bichos extends javax.swing.JFrame {
         initComponents();
         escolhasPadrao();
     }
+    
+    public void Sortear(){
+        jButton1.setText("Inicio");
+        Random r = new Random();
+        int idx = r.nextInt(nomeSorteado.length);
+        int idx2 = r.nextInt(nomeSorteado.length);
+        int idx3 = r.nextInt(nomeSorteado.length);
+                int idx4 = r.nextInt(nomeSorteado.length);
+
+
+        String bicho1, bicho2, bicho3, bicho4;
+        bicho1 = escolha1.getSelectedItem() + "";
+        bicho2 = escolha2.getSelectedItem() + "";
+        bicho3 = escolha3.getSelectedItem() + "";
+        bicho4 = escolha4.getSelectedItem() + "";
+        int acertos = 0;
+        for(int i = 0; i < 1; i++){
+
+            if(nomeSorteado[idx].equals(bicho1)
+                || nomeSorteado[idx].equals(bicho2)
+                || nomeSorteado[idx].equals(bicho3)
+            ){
+                acertos+=1;
+            }
+
+            if(nomeSorteado[idx2].equals(bicho1)
+                || nomeSorteado[idx2].equals(bicho2)
+                || nomeSorteado[idx2].equals(bicho3)
+            ){
+                acertos+=1;
+            }
+            if(nomeSorteado[idx3].equals(bicho1)
+                || nomeSorteado[idx3].equals(bicho2)
+                || nomeSorteado[idx3].equals(bicho3)
+            ){
+                acertos+=1;
+            }
+            
+            if(nomeSorteado[idx4].equals(bicho1)
+                    || nomeSorteado[idx4].equals(bicho2)
+                    || nomeSorteado[idx4].equals(bicho3)
+                    || nomeSorteado[idx4].equals(bicho4)){
+                acertos+=1;
+            }
+
+
+
+            i++;
+
+        }
+        
+          switch(acertos){
+            
+            case 4:
+               jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " +nomeSorteado[idx4]+"\n\n" + "Você... ACERTOOOUU!!! \n\n 4 de 4 acertos\n Parabéns premio máximo!");
+               jOptionPane2.showMessageDialog(null, "+100 coins!!!");
+                break;
+              
+            case 3:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] +" e " +nomeSorteado[idx4]+ "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 4 acertos\n Parabéns pelo premio!");
+                jOptionPane2.showMessageDialog(null, "+75 coins!!!");
+                break;
+            
+            case 2:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " +nomeSorteado[idx4]+"\n\n" + "Você... ACERTOUU! \n\n 2 de 4 acertos\n Parabéns pelo premio!");
+                 jOptionPane2.showMessageDialog(null, "+50 coins!!!");
+                break;
+            case 1:
+               jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " +nomeSorteado[idx4]+"\n\n" + "Você... Acertou! \n\n1 de 4 acertos");
+               jOptionPane2.showMessageDialog(null, "+25 coins!!!");
+                break;
+            default:
+              jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " +nomeSorteado[idx4]+"\n\n" + "Você... Errou, Tente novamente :(");
+              jOptionPane2.showMessageDialog(null, "voce perdeu seus coins apostados");
+        }
+          
+
+        jButton1.setEnabled(true); 
+        jButton2.setEnabled(false);        // TODO add your handling code here:
+
+        jButton3.setEnabled(true); 
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -165,86 +247,8 @@ public class Escolher4Bichos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-        jButton1.setText("Inicio");
-        Random r = new Random();
-        int idx = r.nextInt(nomeSorteado.length);
-        int idx2 = r.nextInt(nomeSorteado.length);
-        int idx3 = r.nextInt(nomeSorteado.length);
-                int idx4 = r.nextInt(nomeSorteado.length);
-
-
-        String bicho1, bicho2, bicho3, bicho4;
-        bicho1 = escolha1.getSelectedItem() + "";
-        bicho2 = escolha2.getSelectedItem() + "";
-        bicho3 = escolha3.getSelectedItem() + "";
-        bicho4 = escolha4.getSelectedItem() + "";
-        int acertos = 0;
-        for(int i = 0; i < 1; i++){
-
-            if(nomeSorteado[idx].equals(bicho1)
-                || nomeSorteado[idx].equals(bicho2)
-                || nomeSorteado[idx].equals(bicho3)
-            ){
-                acertos+=1;
-            }
-
-            if(nomeSorteado[idx2].equals(bicho1)
-                || nomeSorteado[idx2].equals(bicho2)
-                || nomeSorteado[idx2].equals(bicho3)
-            ){
-                acertos+=1;
-            }
-            if(nomeSorteado[idx3].equals(bicho1)
-                || nomeSorteado[idx3].equals(bicho2)
-                || nomeSorteado[idx3].equals(bicho3)
-            ){
-                acertos+=1;
-            }
-            
-            if(nomeSorteado[idx4].equals(bicho1)
-                    || nomeSorteado[idx4].equals(bicho2)
-                    || nomeSorteado[idx4].equals(bicho3)
-                    || nomeSorteado[idx4].equals(bicho4)){
-                acertos+=1;
-            }
-
-
-
-            i++;
-
-        }
-        
-          switch(acertos){
-            
-            case 4:
-               jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " +nomeSorteado[idx4]+"\n\n" + "Você... ACERTOOOUU!!! \n\n 4 de 4 acertos\n Parabéns premio máximo!");
-               jOptionPane2.showMessageDialog(null, "+100 coins!!!");
-                break;
-              
-            case 3:
-                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] +" e " +nomeSorteado[idx4]+ "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 4 acertos\n Parabéns pelo premio!");
-                jOptionPane2.showMessageDialog(null, "+75 coins!!!");
-                break;
-            
-            case 2:
-                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " +nomeSorteado[idx4]+"\n\n" + "Você... ACERTOUU! \n\n 2 de 4 acertos\n Parabéns pelo premio!");
-                 jOptionPane2.showMessageDialog(null, "+50 coins!!!");
-                break;
-            case 1:
-               jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " +nomeSorteado[idx4]+"\n\n" + "Você... Acertou! \n\n1 de 4 acertos");
-               jOptionPane2.showMessageDialog(null, "+25 coins!!!");
-                break;
-            default:
-              jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " +nomeSorteado[idx4]+"\n\n" + "Você... Errou, Tente novamente :(");
-              jOptionPane2.showMessageDialog(null, "voce perdeu seus coins apostados");
-        }
-          
-
-        jButton1.setEnabled(true); 
-        jButton2.setEnabled(false);        // TODO add your handling code here:
-
-        jButton3.setEnabled(true);        // TODO add your handling code here:
+        Sortear();
+               // TODO add your handling code here:
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
