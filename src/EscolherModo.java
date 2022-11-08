@@ -9,16 +9,6 @@
  */
 public class EscolherModo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form EscolherModoTeste
-     */
-
-    public void inicial() {
-        Inicial i = new Inicial();
-        this.dispose();
-        i.setVisible(true);
-    }
-
     public void Escolhas() {
         if (jRadioButton1.isSelected()) {
             EscolherBicho t = new EscolherBicho();
@@ -191,7 +181,8 @@ public class EscolherModo extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-        inicial();
+        Inicial.inicial();
+        this.dispose();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed

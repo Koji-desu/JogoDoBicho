@@ -9,12 +9,6 @@
  */
 public class Regras extends javax.swing.JFrame {
 
-    public void inicial() {
-        Inicial i = new Inicial();
-        this.dispose();
-        i.setVisible(true);
-    }
-
     public Regras() {
         initComponents();
     }
@@ -96,7 +90,8 @@ public class Regras extends javax.swing.JFrame {
 
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
         // TODO add your handling code here:
-        inicial();
+        Inicial.inicial();
+        this.dispose();
     }//GEN-LAST:event_voltarButtonActionPerformed
 
     /**

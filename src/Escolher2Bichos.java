@@ -37,12 +37,6 @@ public class Escolher2Bichos extends javax.swing.JFrame {
         m.setVisible(true);
     }
 
-    public void Inicio() {
-        Inicial i = new Inicial();
-        this.dispose();
-        i.setVisible(true);
-    }
-
     public void Sortear() {
         jButton1.setText("Inicio");
         Random r = new Random();
@@ -51,26 +45,22 @@ public class Escolher2Bichos extends javax.swing.JFrame {
         String bicho1, bicho2;
         bicho1 = escolha1.getSelectedItem() + "";
         bicho2 = escolha2.getSelectedItem() + "";
-        
+
         int acertos = 0;
-        for(int i = 0; i < 1; i++){
-        
-            if(nomeSorteado[idx].equals(bicho1)
-                || nomeSorteado[idx].equals(bicho2)
-                
-                    ){
-                    acertos+=1;
+        for (int i = 0; i < 1; i++) {
+
+            if (nomeSorteado[idx].equals(bicho1)
+                    || nomeSorteado[idx].equals(bicho2)) {
+                acertos += 1;
             }
-            
-            if(nomeSorteado[idx2].equals(bicho1)
-                || nomeSorteado[idx2].equals(bicho2)
-                
-                    ){
-                    acertos+=1;
+
+            if (nomeSorteado[idx2].equals(bicho1)
+                    || nomeSorteado[idx2].equals(bicho2)) {
+                acertos += 1;
             }
         }
 
-        switch(acertos){
+        switch (acertos) {
             case 2:
                 jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 2 de 2 acertos\n Parabéns premio máximo!");
                 jOptionPane2.showMessageDialog(null, "+100 coins!!!");
@@ -83,7 +73,7 @@ public class Escolher2Bichos extends javax.swing.JFrame {
                 jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + " e " + nomeSorteado[idx2] + "\n\n" + "Você... Errou, Tente novamente :(");
                 jOptionPane2.showMessageDialog(null, "voce perdeu seus coins apostados");
         }
-        
+
         jButton1.setEnabled(true);
         jButton2.setEnabled(false);
         jButton3.setEnabled(true);
@@ -197,7 +187,8 @@ public class Escolher2Bichos extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Inicio();
+        Inicial.inicial();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

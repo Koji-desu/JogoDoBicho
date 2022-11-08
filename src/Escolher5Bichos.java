@@ -1,11 +1,11 @@
 
+
 import java.util.Random;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author Koji
@@ -15,17 +15,11 @@ public class Escolher5Bichos extends javax.swing.JFrame {
     /**
      * Creates new form Escolher5BichosTeste
      */
-            String nomeSorteado[] = {
+    String nomeSorteado[] = {
         "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
         "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
         "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro",
         "Tigre", "Urso", "Veado", "Vaca"};
-
-public void Voltar() {
-        EscolherModo m = new EscolherModo();
-        this.dispose();
-        m.setVisible(true);
-    }
 
     public void escolhasPadrao() {
         escolha2.setSelectedIndex(1);
@@ -39,15 +33,8 @@ public void Voltar() {
         initComponents();
         escolhasPadrao();
     }
-    
 
-    public void Inicio() {
-        Inicial i = new Inicial();
-        this.dispose();
-        i.setVisible(true);
-    }
-    
-    public void Sortear(){
+    public void Sortear() {
         jButton1.setText("Inicio");
         Random r = new Random();
         int idx = r.nextInt(nomeSorteado.length);
@@ -63,89 +50,86 @@ public void Voltar() {
         bicho4 = escolha4.getSelectedItem() + "";
         bicho5 = escolha5.getSelectedItem() + "";
         int acertos = 0;
-        for(int i = 0; i < 1; i++){
+        for (int i = 0; i < 1; i++) {
 
-            if(nomeSorteado[idx].equals(bicho1)
-                || nomeSorteado[idx].equals(bicho2)
-                || nomeSorteado[idx].equals(bicho3)
-                || nomeSorteado[idx].equals(bicho4)
-                || nomeSorteado[idx].equals(bicho5)    
-                    ){
-                acertos+=1;
-            }
-
-            if(nomeSorteado[idx2].equals(bicho1)
-                || nomeSorteado[idx2].equals(bicho2)
-                || nomeSorteado[idx2].equals(bicho3)
-                || nomeSorteado[idx2].equals(bicho4)
-                || nomeSorteado[idx2].equals(bicho5)                    
-            ){
-                acertos+=1;
-            }
-            if(nomeSorteado[idx3].equals(bicho1)
-                || nomeSorteado[idx3].equals(bicho2)
-                || nomeSorteado[idx3].equals(bicho3)
-                || nomeSorteado[idx3].equals(bicho4)
-                || nomeSorteado[idx3].equals(bicho5)                    
-            ){
-                acertos+=1;
+            if (nomeSorteado[idx].equals(bicho1)
+                    || nomeSorteado[idx].equals(bicho2)
+                    || nomeSorteado[idx].equals(bicho3)
+                    || nomeSorteado[idx].equals(bicho4)
+                    || nomeSorteado[idx].equals(bicho5)) {
+                acertos += 1;
             }
 
-            if(nomeSorteado[idx4].equals(bicho1)
-                || nomeSorteado[idx4].equals(bicho2)
-                || nomeSorteado[idx4].equals(bicho3)
-                || nomeSorteado[idx4].equals(bicho4)
-                || nomeSorteado[idx4].equals(bicho5)    ){
-                acertos+=1;
+            if (nomeSorteado[idx2].equals(bicho1)
+                    || nomeSorteado[idx2].equals(bicho2)
+                    || nomeSorteado[idx2].equals(bicho3)
+                    || nomeSorteado[idx2].equals(bicho4)
+                    || nomeSorteado[idx2].equals(bicho5)) {
+                acertos += 1;
             }
-            if(nomeSorteado[idx5].equals(bicho1)
-                || nomeSorteado[idx5].equals(bicho2)
-                || nomeSorteado[idx5].equals(bicho3)
-                || nomeSorteado[idx5].equals(bicho4)
-                || nomeSorteado[idx5].equals(bicho5)    ){
-                acertos+=1;
+            if (nomeSorteado[idx3].equals(bicho1)
+                    || nomeSorteado[idx3].equals(bicho2)
+                    || nomeSorteado[idx3].equals(bicho3)
+                    || nomeSorteado[idx3].equals(bicho4)
+                    || nomeSorteado[idx3].equals(bicho5)) {
+                acertos += 1;
+            }
+
+            if (nomeSorteado[idx4].equals(bicho1)
+                    || nomeSorteado[idx4].equals(bicho2)
+                    || nomeSorteado[idx4].equals(bicho3)
+                    || nomeSorteado[idx4].equals(bicho4)
+                    || nomeSorteado[idx4].equals(bicho5)) {
+                acertos += 1;
+            }
+            if (nomeSorteado[idx5].equals(bicho1)
+                    || nomeSorteado[idx5].equals(bicho2)
+                    || nomeSorteado[idx5].equals(bicho3)
+                    || nomeSorteado[idx5].equals(bicho4)
+                    || nomeSorteado[idx5].equals(bicho5)) {
+                acertos += 1;
             }
 
             i++;
 
         }
-        
-                switch (acertos) {
-                    case 5:
-                        // if de 5 acertos
-                        jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " +nomeSorteado[idx4]+" e " +nomeSorteado[idx5]+"\n\n" + "Você... ACERTOOOUU!!! \n\n 5 de 5 acertos\n Parabéns premio máximo!");
-                        jOptionPane2.showMessageDialog(null, "+100 coins!!!");
-                        break;
-                    case 4:
-                        // if de 4 acertos
-                        jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " +nomeSorteado[idx4]+" e " +nomeSorteado[idx5]+"\n\n" + "Você... ACERTOOOUU!!! \n\n 4 de 5 acertos\n Parabéns pelo premio!");
-                        jOptionPane2.showMessageDialog(null, "+80 coins!!!");
-                        break;
-                /* if de 3 acertos */
-                    case 3:
-                        jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] +",  " +nomeSorteado[idx4]+ " e " +nomeSorteado[idx5]+"\n\n" + "Você... ACERTOU!!! \n\n 3 de 5 acertos\n Parabéns pelo premio!");
-                        jOptionPane2.showMessageDialog(null, "+60 coins!!!");
-                        break;
-                /* if de 2 acertos */
-                    case 2:
-                        jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " +nomeSorteado[idx4]+" e " +nomeSorteado[idx5]+"\n\n" + "Você... ACERTOUU! \n\n 2 de 5 acertos\n Parabéns pelo premio!");
-                        jOptionPane2.showMessageDialog(null, "+40 coins!!!");
-                        break;
-                    case 1:
-                        // IF de 1 acerto
-                        jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " +nomeSorteado[idx4]+" e " +nomeSorteado[idx5]+"\n\n" + "Você... Acertou! \n\n1 de 5 acertos");
-                        jOptionPane2.showMessageDialog(null, "+20 coins!!!");
-                        break;
-                    default:
-                        jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " +nomeSorteado[idx4]+" e " +nomeSorteado[idx5]+"\n\n" + "Você... Errou, Tente novamente :(");
-                        jOptionPane2.showMessageDialog(null, "voce perdeu seus coins apostados");
-                        break;
-                }
 
-         jButton1.setEnabled(true); 
+        switch (acertos) {
+            case 5:
+                // if de 5 acertos
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " + nomeSorteado[idx4] + " e " + nomeSorteado[idx5] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 5 de 5 acertos\n Parabéns premio máximo!");
+                jOptionPane2.showMessageDialog(null, "+100 coins!!!");
+                break;
+            case 4:
+                // if de 4 acertos
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " + nomeSorteado[idx4] + " e " + nomeSorteado[idx5] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 4 de 5 acertos\n Parabéns pelo premio!");
+                jOptionPane2.showMessageDialog(null, "+80 coins!!!");
+                break;
+            /* if de 3 acertos */
+            case 3:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " + nomeSorteado[idx4] + " e " + nomeSorteado[idx5] + "\n\n" + "Você... ACERTOU!!! \n\n 3 de 5 acertos\n Parabéns pelo premio!");
+                jOptionPane2.showMessageDialog(null, "+60 coins!!!");
+                break;
+            /* if de 2 acertos */
+            case 2:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " + nomeSorteado[idx4] + " e " + nomeSorteado[idx5] + "\n\n" + "Você... ACERTOUU! \n\n 2 de 5 acertos\n Parabéns pelo premio!");
+                jOptionPane2.showMessageDialog(null, "+40 coins!!!");
+                break;
+            case 1:
+                // IF de 1 acerto
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " + nomeSorteado[idx4] + " e " + nomeSorteado[idx5] + "\n\n" + "Você... Acertou! \n\n1 de 5 acertos");
+                jOptionPane2.showMessageDialog(null, "+20 coins!!!");
+                break;
+            default:
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ",  " + nomeSorteado[idx3] + ",  " + nomeSorteado[idx4] + " e " + nomeSorteado[idx5] + "\n\n" + "Você... Errou, Tente novamente :(");
+                jOptionPane2.showMessageDialog(null, "voce perdeu seus coins apostados");
+                break;
+        }
+
+        jButton1.setEnabled(true);
         jButton2.setEnabled(false);        // TODO add your handling code here:
 
-        jButton3.setEnabled(true); 
+        jButton3.setEnabled(true);
     }
 
     /**
@@ -266,17 +250,19 @@ public void Voltar() {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Sortear();
-               // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        Voltar();
+        Inicial.escolherModo();
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Inicio();
+        Inicial.inicial();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -294,27 +280,23 @@ public void Voltar() {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
 
-}
+                }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Escolher5Bichos.class  
+            java.util.logging.Logger.getLogger(Escolher5Bichos.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Escolher5Bichos.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-} catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Escolher5Bichos.class  
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Escolher5Bichos.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-} catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Escolher5Bichos.class  
-
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Escolher5Bichos.class  
-
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Escolher5Bichos.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>

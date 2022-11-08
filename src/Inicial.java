@@ -12,39 +12,38 @@ public class Inicial extends javax.swing.JFrame {
     /**
      * Creates new form Inicial
      */
-    /** Métodos e Funções **/
-    public void inicial() {
+    /**
+     * Métodos e Funções *
+     */
+    public static void escolherModo() {
+        EscolherModo m = new EscolherModo();
+        m.setVisible(true);
+    }
+
+    public static void inicial() {
         Inicial i = new Inicial();
-        this.dispose();
+
         i.setVisible(true);
     }
 
-    public void nextModo() {
-
-        EscolherModo t = new EscolherModo();
-        this.dispose();
-        t.setVisible(true);
-        
-
-    }
-    
-    public void nextCreditos() {
+    public void creditos() {
         Creditos c = new Creditos();
         this.dispose();
         c.setVisible(true);
     }
 
-    public void nextLista() {
+    public void listaBichos() {
         Lista l = new Lista();
         this.dispose();
         l.setVisible(true);
     }
 
-    public void nextRegras() {
+    public void regras() {
         Regras r = new Regras();
         this.dispose();
         r.setVisible(true);
     }
+
     public Inicial() {
         initComponents();
     }
@@ -183,22 +182,23 @@ public class Inicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jogarButtonFocusLost
 
     private void jogarButtonComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jogarButtonComponentHidden
-        this.dispose();
+
     }//GEN-LAST:event_jogarButtonComponentHidden
 
     private void jogarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarButtonActionPerformed
-        nextModo();
-        
+        escolherModo();
+        this.dispose();
+
     }//GEN-LAST:event_jogarButtonActionPerformed
 
     private void regrasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regrasButtonActionPerformed
 
-        nextRegras();
+        regras();
     }//GEN-LAST:event_regrasButtonActionPerformed
 
     private void listaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaButtonActionPerformed
-        nextLista();
-        
+        listaBichos();
+
     }//GEN-LAST:event_listaButtonActionPerformed
 
     private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
@@ -207,8 +207,8 @@ public class Inicial extends javax.swing.JFrame {
 
     private void listaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaButton1ActionPerformed
         // TODO add your handling code here:
-        nextCreditos();
-        
+        creditos();
+
     }//GEN-LAST:event_listaButton1ActionPerformed
 
     /**

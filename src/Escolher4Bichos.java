@@ -30,11 +30,6 @@ public class Escolher4Bichos extends javax.swing.JFrame {
         this.dispose();
         m.setVisible(true);
     }
-    public void Inicio() {
-        Inicial t = new Inicial();
-        this.dispose();
-        t.setVisible(true);
-    }
 
     public void escolhasPadrao() {
         escolha1.setSelectedIndex(0);
@@ -259,7 +254,8 @@ public class Escolher4Bichos extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Inicio();
+        Inicial.inicial();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
