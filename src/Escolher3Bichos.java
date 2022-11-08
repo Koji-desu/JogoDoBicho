@@ -20,12 +20,6 @@ public class Escolher3Bichos extends javax.swing.JFrame {
         "Urso", "Veado", "Vaca"
     };
 
-    public void Voltar() {
-        EscolherModo m = new EscolherModo();
-        this.dispose();
-        m.setVisible(true);
-    }
-
     public void escolhasPadrao() {
         escolha1.setSelectedIndex(0);
         escolha2.setSelectedIndex(1);
@@ -225,7 +219,8 @@ public class Escolher3Bichos extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        Voltar();
+        Inicial.escolherModo();
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

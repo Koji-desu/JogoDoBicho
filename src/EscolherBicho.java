@@ -11,33 +11,19 @@ import java.util.Random;
 
 public class EscolherBicho extends javax.swing.JFrame {
 
-    /**
-     * Creates new form EscolherBichoTeste
-     */
-    String nomeSorteado[] = {
-        "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
-        "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
-        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro",
-        "Tigre", "Urso", "Veado", "Vaca"};
-
-    public void Voltar() {
-        EscolherModo m = new EscolherModo();
-        this.dispose();
-        m.setVisible(true);
-    }
-
     public void Sortear() {
+        String bichos[];
+        bichos = Inicial.nomeSorteado;
         Random r = new Random();
-        int idx = r.nextInt(nomeSorteado.length);
-        // lblbicho.setText(nomeSorteado[idx]);
+        int idx = r.nextInt(bichos.length);
         String bicho;
         bicho = escolha1.getSelectedItem() + "";
 
-        if (nomeSorteado[idx].equals(bicho)) {
-            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx] + "\n\n" + "Você... ACERTOOOUU!!!");
+        if (bichos[idx].equals(bicho)) {
+            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + bichos[idx] + "\n\n" + "Você... ACERTOOOUU!!!");
             jOptionPane1.showMessageDialog(null, "Voce ganhou 100 coins!!!");
         } else {
-            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + nomeSorteado[idx] + "\n\n" + "Você... Errou, Tente novamente :(");
+            jOptionPane1.showMessageDialog(null, "O animal sorteado foi: " + bichos[idx] + "\n\n" + "Você... Errou, Tente novamente :(");
             jOptionPane1.showMessageDialog(null, "Voce perdeu seus coins apostados*");
         }
 
@@ -157,19 +143,17 @@ public class EscolherBicho extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
         Inicial.inicial();
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
         Sortear();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        Voltar();
+        Inicial.escolherModo();
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
