@@ -126,7 +126,6 @@ public class Escolher4Bichos extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Jogo do Bicho");
-        setAutoRequestFocus(false);
         setResizable(false);
         setSize(new java.awt.Dimension(500, 500));
 
