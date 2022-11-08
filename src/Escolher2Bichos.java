@@ -22,7 +22,7 @@ public class Escolher2Bichos extends javax.swing.JFrame {
         escolhasPadrao();
     }
 
-    void Sortear() {
+    public void Sortear() {
         String bichos[];
         bichos = Inicial.nomeSorteado;
         jButton1.setText("Inicio");

@@ -18,7 +18,7 @@ public class Escolher3Bichos extends javax.swing.JFrame {
 
     }
 
-    void Sortear() {
+    public void Sortear() {
         jButton1.setText("Inicio");
         String bichos[];
         bichos = Inicial.nomeSorteado;
