@@ -11,15 +11,6 @@ import java.util.Random;
  */
 public class Escolher4Bichos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Escolher4BichosTeste
-     */
-    String nomeSorteado[] = {
-        "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro",
-        "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo",
-        "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro",
-        "Tigre", "Urso", "Veado", "Vaca"};
-
     public void escolhasPadrao() {
         escolha1.setSelectedIndex(0);
         escolha2.setSelectedIndex(1);
@@ -35,11 +26,13 @@ public class Escolher4Bichos extends javax.swing.JFrame {
 
     public void Sortear() {
         jButton1.setText("Inicio");
+        String bichos[];
+        bichos = Inicial.nomeSorteado;
         Random r = new Random();
-        int idx = r.nextInt(nomeSorteado.length);
-        int idx2 = r.nextInt(nomeSorteado.length);
-        int idx3 = r.nextInt(nomeSorteado.length);
-        int idx4 = r.nextInt(nomeSorteado.length);
+        int idx = r.nextInt(bichos.length);
+        int idx2 = r.nextInt(bichos.length);
+        int idx3 = r.nextInt(bichos.length);
+        int idx4 = r.nextInt(bichos.length);
 
         String bicho1, bicho2, bicho3, bicho4;
         bicho1 = escolha1.getSelectedItem() + "";
@@ -49,27 +42,30 @@ public class Escolher4Bichos extends javax.swing.JFrame {
         int acertos = 0;
         for (int i = 0; i < 1; i++) {
 
-            if (nomeSorteado[idx].equals(bicho1)
-                    || nomeSorteado[idx].equals(bicho2)
-                    || nomeSorteado[idx].equals(bicho3)) {
+            if (bichos[idx].equals(bicho1)
+                    || bichos[idx].equals(bicho2)
+                    || bichos[idx].equals(bicho3)
+                    || bichos[idx].equals(bicho4)) {
                 acertos += 1;
             }
 
-            if (nomeSorteado[idx2].equals(bicho1)
-                    || nomeSorteado[idx2].equals(bicho2)
-                    || nomeSorteado[idx2].equals(bicho3)) {
+            if (bichos[idx2].equals(bicho1)
+                    || bichos[idx2].equals(bicho2)
+                    || bichos[idx2].equals(bicho3)
+                    || bichos[idx2].equals(bicho4)) {
                 acertos += 1;
             }
-            if (nomeSorteado[idx3].equals(bicho1)
-                    || nomeSorteado[idx3].equals(bicho2)
-                    || nomeSorteado[idx3].equals(bicho3)) {
+            if (bichos[idx3].equals(bicho1)
+                    || bichos[idx3].equals(bicho2)
+                    || bichos[idx3].equals(bicho3)
+                    || bichos[idx3].equals(bicho4)) {
                 acertos += 1;
             }
 
-            if (nomeSorteado[idx4].equals(bicho1)
-                    || nomeSorteado[idx4].equals(bicho2)
-                    || nomeSorteado[idx4].equals(bicho3)
-                    || nomeSorteado[idx4].equals(bicho4)) {
+            if (bichos[idx4].equals(bicho1)
+                    || bichos[idx4].equals(bicho2)
+                    || bichos[idx4].equals(bicho3)
+                    || bichos[idx4].equals(bicho4)) {
                 acertos += 1;
             }
 
@@ -80,25 +76,25 @@ public class Escolher4Bichos extends javax.swing.JFrame {
         switch (acertos) {
 
             case 4:
-                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " + nomeSorteado[idx4] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 4 de 4 acertos\n Parabéns premio máximo!");
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + bichos[idx] + ", " + bichos[idx2] + ", " + bichos[idx3] + " e " + bichos[idx4] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 4 de 4 acertos\n Parabéns premio máximo!");
                 jOptionPane2.showMessageDialog(null, "+100 coins!!!");
                 break;
 
             case 3:
-                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ", " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " + nomeSorteado[idx4] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 4 acertos\n Parabéns pelo premio!");
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + bichos[idx] + ", " + bichos[idx2] + ", " + bichos[idx3] + " e " + bichos[idx4] + "\n\n" + "Você... ACERTOOOUU!!! \n\n 3 de 4 acertos\n Parabéns pelo premio!");
                 jOptionPane2.showMessageDialog(null, "+75 coins!!!");
                 break;
 
             case 2:
-                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " + nomeSorteado[idx4] + "\n\n" + "Você... ACERTOUU! \n\n 2 de 4 acertos\n Parabéns pelo premio!");
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + bichos[idx] + ",  " + bichos[idx2] + ", " + bichos[idx3] + " e " + bichos[idx4] + "\n\n" + "Você... ACERTOUU! \n\n 2 de 4 acertos\n Parabéns pelo premio!");
                 jOptionPane2.showMessageDialog(null, "+50 coins!!!");
                 break;
             case 1:
-                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " + nomeSorteado[idx4] + "\n\n" + "Você... Acertou! \n\n1 de 4 acertos");
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + bichos[idx] + ",  " + bichos[idx2] + ", " + bichos[idx3] + " e " + bichos[idx4] + "\n\n" + "Você... Acertou! \n\n1 de 4 acertos");
                 jOptionPane2.showMessageDialog(null, "+25 coins!!!");
                 break;
             default:
-                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + nomeSorteado[idx] + ",  " + nomeSorteado[idx2] + ", " + nomeSorteado[idx3] + " e " + nomeSorteado[idx4] + "\n\n" + "Você... Errou, Tente novamente :(");
+                jOptionPane1.showMessageDialog(null, "Os animais sorteados foram: " + bichos[idx] + ",  " + bichos[idx2] + ", " + bichos[idx3] + " e " + bichos[idx4] + "\n\n" + "Você... Errou, Tente novamente :(");
                 jOptionPane2.showMessageDialog(null, "voce perdeu seus coins apostados");
         }
 
@@ -225,18 +221,14 @@ public class Escolher4Bichos extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Sortear();
-        // TODO add your handling code here:
-// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
         Inicial.escolherModo();
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
         Inicial.inicial();
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
