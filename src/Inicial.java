@@ -1,3 +1,8 @@
+
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -49,6 +54,9 @@ public class Inicial extends javax.swing.JFrame {
 
     public Inicial() {
         initComponents();
+        URL caminhoIcone = getClass().getResource("/imagem/monkey.png");
+        Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoIcone);
+        this.setIconImage(iconeTitulo);
     }
 
     /**

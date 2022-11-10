@@ -1,4 +1,7 @@
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
 import java.util.Random;
 
 /*
@@ -20,6 +23,9 @@ public class Escolher2Bichos extends javax.swing.JFrame {
     public Escolher2Bichos() {
         initComponents();
         escolhasPadrao();
+        URL caminhoIcone = getClass().getResource("/imagem/monkey.png");
+        Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoIcone);
+        this.setIconImage(iconeTitulo);
     }
 
     public void Sortear() {
